@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url("https://images.pexels.com/photos/628281/pexels-photo-628281.jpeg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 100%;
+            height: 100vh;
+        }
+        .d-none{
+            display: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 80vh;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-height: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 75%;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            position: relative;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+
+        button.remove {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            font-size: 12px;
+        }
+        .edit{
+            position: absolute;
+            right: 78px;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        button.remove:hover {
+            background-color: darkred;
+        }
+        /* Strike-through completed tasks */
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        /* Style the checkbox */
+        .checkbox {
+            margin-right: 10px;
+        }
+        #todoListCard input{
+            width: 16px;
+        }
+        span.taskText{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello taj, today task plan to work!</h1>
+        <input type="text" id="todoGet" placeholder="Add a new task...">
+        <button id="addbutton">Add</button>
+        <ul id="todoListCard"></ul>
+    </div>
+    
+    <script src="assets/js/to-do.js"></script>
+</body>
+</html>
