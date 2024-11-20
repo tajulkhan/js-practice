@@ -1,0 +1,126 @@
+/* Base Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Small Button */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* Extra Small Button */
+.btn-xs {
+    padding: 4px 8px;
+    font-size: 10px;
+}
+
+/* Large Button */
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 18px;
+}
+
+/* Medium Button */
+.btn-md {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Extra Large Button */
+.btn-xl {
+    padding: 16px 32px;
+    font-size: 20px;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Button Colors */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+}
+/* Default: Extra small buttons (mobile-first) */
+.btn {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+/* Small screens (sm) */
+@media (min-width: 576px) {
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Medium screens (md) */
+@media (min-width: 768px) {
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Large screens (lg) */
+@media (min-width: 992px) {
+    .btn {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+/* Extra large screens (xl) */
+@media (min-width: 1200px) {
+    .btn {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+}
