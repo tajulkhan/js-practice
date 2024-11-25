@@ -1,23 +1,25 @@
-:root{
-    /* Colors variables */
-    --primary:#007bff;
-    --secondary:#6c757d;
-    --success:#28a745;
-    --danger:#dc3545;
-    --warning:#ffc107;
-    --info:#17a2b8;
-    --light:#f8f9fa;
-    --dark:#343a40;
-    --white:#ffffff;
-    --black:#000000;
-    --btn-hover:#0056b3;
+:root {
+    /* Color variables */
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --white: #ffffff;
+    --black: #000000;
+    --btn-hover: #0056b3;
+
     /* Font size variables */
-    --fs-xs:10px;
-    --fs-sm:12px;
-    --fs-md:16px;
-    --fs-lg:18px;
-    --fs-xl:20px;
+    --fs-xs: 10px;
+    --fs-sm: 12px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
 }
+
 /* Base Button Styles */
 .btn {
     display: inline-block;
@@ -28,39 +30,48 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
-/* Small Button */
-.btn-sm {
-    padding: 6px 12px;
-    font-size: 12px;
-}
-/* Extra Small Button */
-.btn-xs {
-    padding: 4px 8px;
-    font-size: var(--fs-xs);
-}
-/* Large Button */
-.btn-lg {
-    padding: 14px 28px;
-    font-size: var(--fs-lg);
-}
-/* Medium Button */
-.btn-md {
-    padding: 10px 20px;
-    font-size: var(--fs-md);
-}
-/* Extra Large Button */
-.btn-xl {
-    padding: 16px 32px;
-    font-size: var(--fs-xl);
-}
-/* Hover effect */
+
+/* Button Hover effect */
 .btn:hover {
     background-color: var(--btn-hover);
     transform: scale(1.05);
 }
-/* Button Colors */
+
+/* Button Focus effect for accessibility */
+.btn:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: var(--fs-sm);
+}
+
+.btn-xs {
+    padding: 4px 8px;
+    font-size: var(--fs-xs);
+}
+
+.btn-lg {
+    padding: 14px 28px;
+    font-size: var(--fs-lg);
+}
+
+.btn-md {
+    padding: 10px 20px;
+    font-size: var(--fs-md);
+}
+
+.btn-xl {
+    padding: 16px 32px;
+    font-size: var(--fs-xl);
+}
+
+/* Button Color Variants */
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);
@@ -90,39 +101,32 @@
     color: var(--black);
 }
 .btn-dark {
-    background-color: var(--dark);
+    background-color: var(--dark); 
     color: var(--white);
 }
-/* Default: Extra small buttons (mobile-first) */
-.btn {
-    font-size: var(--fs-xs);
-    padding: 6px 12px;
-}
-/* Small screens (sm) */
+
+/* Responsive Button Sizes */
 @media (min-width: 576px) {
-    .btn {
-        font-size: var(--fs-sm);
-        padding: 8px 16px;
+    .btn { 
+        font-size: var(--fs-sm); 
+        padding: 8px 16px; 
     }
 }
-/* Medium screens (md) */
+
 @media (min-width: 768px) {
-    .btn {
-        font-size: var(--fs-md);
-        padding: 10px 20px;
+    .btn { 
+        font-size: var(--fs-md); padding: 10px 20px; 
     }
 }
-/* Large screens (lg) */
+
 @media (min-width: 992px) {
-    .btn {
-        font-size: var(--fs-lg);
-        padding: 12px 24px;
+    .btn { 
+        font-size: var(--fs-lg); padding: 12px 24px; 
     }
 }
-/* Extra large screens (xl) */
+
 @media (min-width: 1200px) {
-    .btn {
-        font-size: var(--fs-xl);
-        padding: 14px 28px;
+    .btn { 
+        font-size: var(--fs-xl); padding: 14px 28px; 
     }
 }
