@@ -124,7 +124,6 @@
         font-size: var(--fs-lg); padding: 12px 24px; 
     }
 }
-
 @media (min-width: 1200px) {
     .btn { 
         font-size: var(--fs-xl); padding: 14px 28px; 
