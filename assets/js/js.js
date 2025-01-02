@@ -176,3 +176,23 @@ if (isAuthenticated && (userRole === 'admin' || userRole === 'manager') && hasPe
 } else {
     console.log("Access denied.");
 }
+
+
+let status = 'completed';
+
+switch (status) {
+    case 'pending':
+        console.log('Your task is still pending.');
+        break;
+    case 'in-progress':
+        console.log('Your task is in progress.');
+        break;
+    case 'completed':
+        console.log('Your task is completed.');
+        break;
+    case 'failed':
+        console.log('Your task has failed.');
+        break;
+    default:
+        console.log('Unknown task status.');
+}
