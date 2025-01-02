@@ -160,3 +160,19 @@ if (age >= 18 && hasTicket) {
 } else {
     console.log("Invalid access.");
 }
+
+let userRole = 'admin';
+let isAuthenticated = true;
+let hasPermission = true;
+
+if (isAuthenticated && (userRole === 'admin' || userRole === 'manager') && hasPermission) {
+    console.log("Access granted to admin or manager.");
+} else if (isAuthenticated && userRole === 'user' && hasPermission) {
+    console.log("Access granted to regular user.");
+} else if (!isAuthenticated) {
+    console.log("User is not authenticated.");
+} else if (!hasPermission) {
+    console.log("User does not have sufficient permissions.");
+} else {
+    console.log("Access denied.");
+}
