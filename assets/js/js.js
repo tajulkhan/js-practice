@@ -142,3 +142,21 @@ fetchData()
   
   fetchDataAsync();
   
+
+let age = 25;
+let hasTicket = true;
+let isVIP = false;
+
+if (age >= 18 && hasTicket) {
+    if (isVIP) {
+        console.log("Welcome VIP! Enjoy your premium experience.");
+    } else {
+        console.log("Welcome! Enjoy the event.");
+    }
+} else if (age < 18 && hasTicket) {
+    console.log("You are underage, but you can still attend with a guardian.");
+} else if (!hasTicket) {
+    console.log("Sorry, you need a ticket to enter.");
+} else {
+    console.log("Invalid access.");
+}
