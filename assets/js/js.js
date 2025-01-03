@@ -196,3 +196,67 @@ switch (status) {
     default:
         console.log('Unknown task status.');
 }
+
+// Simulate a pizza ordering system in JavaScript
+
+class PizzaOrder {
+  constructor() {
+    this.size = '';
+    this.toppings = [];
+    this.status = 'No order placed yet.';
+  }
+
+  // Method to set pizza size
+  setSize(size) {
+    this.size = size;
+    console.log(`Pizza size set to: ${this.size}`);
+  }
+
+  // Method to add toppings
+  addTopping(topping) {
+    if (!this.toppings.includes(topping)) {
+      this.toppings.push(topping);
+      console.log(`Added topping: ${topping}`);
+    }
+  }
+
+  // Method to place the order
+  placeOrder() {
+    if (this.size === '' || this.toppings.length === 0) {
+      console.log('Please choose a size and at least one topping!');
+      this.status = 'Order not complete.';
+      return;
+    }
+
+    this.status = 'Order placed. Preparing your pizza...';
+    console.log(this.status);
+
+    // Simulating preparation time
+    setTimeout(() => {
+      this.status = 'Your pizza is ready!';
+      console.log(this.status);
+      console.log(`You have ordered a ${this.size} pizza with the following toppings: ${this.toppings.join(', ')}.`);
+    }, 3000); // Simulate a 3-second delay for pizza preparation
+  }
+
+  // Method to display current status
+  displayStatus() {
+    console.log(`Status: ${this.status}`);
+  }
+}
+
+// Create a new pizza order instance
+const myOrder = new PizzaOrder();
+
+// Set pizza size and toppings
+myOrder.setSize('Medium');
+myOrder.addTopping('Cheese');
+myOrder.addTopping('Pepperoni');
+
+// Place the order
+myOrder.placeOrder();
+
+// Check order status after a few seconds
+setTimeout(() => {
+  myOrder.displayStatus();
+}, 3500); // After 3.5 seconds, check the status
