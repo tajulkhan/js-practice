@@ -275,3 +275,11 @@ for (let i = n - 2; i >= 0; i--) {
   row += word.slice(0, i + 1) + " ";
   console.log(row);
 }
+
+const words = "TAJUL";
+
+for (let i = 0; i < words.length; i++) {
+  let row = " ".repeat(words.length - i - 1); 
+  row += words.slice(0, i + 1) + " ";
+  console.log(row);
+}
