@@ -260,3 +260,18 @@ myOrder.placeOrder();
 setTimeout(() => {
   myOrder.displayStatus();
 }, 3500); // After 3.5 seconds, check the status
+
+const word = "TAJUL";
+const n = word.length;
+
+for (let i = 0; i < n; i++) {
+  let row = " ".repeat(n - i - 1);  
+  row += word.slice(0, i + 1) + " ";
+  console.log(row);
+}
+
+for (let i = n - 2; i >= 0; i--) {
+  let row = " ".repeat(n - i - 1);  
+  row += word.slice(0, i + 1) + " ";
+  console.log(row);
+}
