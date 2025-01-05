@@ -300,3 +300,14 @@ fetchData
   .catch(error => {
     console.log(error);
   });
+  let promise1 = new Promise((resolve) => setTimeout(resolve, 1000, "First task completed"));
+  let promise2 = new Promise((resolve) => setTimeout(resolve, 2000, "Second task completed"));
+  
+  Promise.all([promise1, promise2])
+    .then(results => {
+      console.log(results);  // ["First task completed", "Second task completed"]
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  
