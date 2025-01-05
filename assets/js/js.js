@@ -283,3 +283,20 @@ for (let i = 0; i < words.length; i++) {
   row += words.slice(0, i + 1) + " ";
   console.log(row);
 }
+let fetchData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Data fetched successfully");
+  }, 1000);
+});
+
+fetchData
+  .then(data => {
+    console.log(data);  
+    return "Next step";  
+  })
+  .then(result => {
+    console.log(result); 
+  })
+  .catch(error => {
+    console.log(error);
+  });
