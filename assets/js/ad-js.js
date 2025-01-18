@@ -38,3 +38,9 @@ console.log(set); // Set { 1, 2, 3 }
 const map = new Map();
 map.set('key', 'value');
 console.log(map.get('key')); // 'value'
+
+for (let i = 0; i < 10; i++) {
+  if (i === 5) continue;  // Skips when i equals 5
+  if (i === 8) break;     // Breaks the loop when i equals 8
+  console.log(i);         // Outputs 0, 1, 2, 3, 4, 6, 7
+}
