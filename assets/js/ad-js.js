@@ -31,3 +31,10 @@ if( x && y ){
 if( x || z ){
   console.log("Code runs");  // This block runs because x || y returns 220(Truthy)
 }
+
+const set = new Set([1, 2, 3, 3]);
+console.log(set); // Set { 1, 2, 3 }
+
+const map = new Map();
+map.set('key', 'value');
+console.log(map.get('key')); // 'value'
