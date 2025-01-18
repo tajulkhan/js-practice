@@ -44,3 +44,12 @@ for (let i = 0; i < 10; i++) {
   if (i === 8) break;     // Breaks the loop when i equals 8
   console.log(i);         // Outputs 0, 1, 2, 3, 4, 6, 7
 }
+
+async function fetchData() {
+  const urls = ['url1', 'url2', 'url3'];
+  for (const url of urls) {
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data);
+  }
+}
