@@ -83,3 +83,11 @@ console.log(arrSorting);
 const arrDup = [1, 2, 2, 3, 4, 4, 5];
 const uniqueArr = [...new Set(arrDup)]
 console.log(uniqueArr); 
+
+// Event Delegation
+// Event delegation is a technique to handle events on dynamically added elements without needing to bind an event listener to each element:
+document.querySelector("#parent").addEventListener("click", function(event) {
+  if (event.target && event.target.matches("button.class-name")) {
+    console.log("Button clicked!");
+  }
+});
