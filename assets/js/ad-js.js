@@ -53,3 +53,9 @@ async function fetchData() {
       console.log(data);
   }
 }
+// Finding the Maximum/Minimum Value in an Array
+const numbers = [3, 1, 4, 1, 5, 9];
+const max = Math.max(...numbers); // Max value
+const min = Math.min(...numbers); // Min value
+console.log(max); // 9
+console.log(min); // 1
