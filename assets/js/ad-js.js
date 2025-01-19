@@ -65,3 +65,11 @@ console.log(min);
 const arr = [1, 2, 3, 4];
 const reversedArr = arr.reverse();
 console.log(reversedArr);
+
+// Checking if a String is a Palindrome
+function isPalindrome(str) {
+  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
