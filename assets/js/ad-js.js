@@ -55,7 +55,13 @@ async function fetchData() {
 }
 // Finding the Maximum/Minimum Value in an Array
 const numbers = [3, 1, 4, 1, 5, 9];
-const max = Math.max(...numbers); // Max value
-const min = Math.min(...numbers); // Min value
-console.log(max); // 9
-console.log(min); // 1
+const max = Math.max(...numbers); 
+const min = Math.min(...numbers); 
+console.log(max); 
+console.log(min); 
+
+
+// Reversing an Array
+const arr = [1, 2, 3, 4];
+const reversedArr = arr.reverse();
+console.log(reversedArr);
