@@ -73,3 +73,13 @@ function isPalindrome(str) {
 }
 
 console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+
+// To sort an array in ascending order
+const arrSorting = [5, 3, 8, 1];
+arrSorting.sort((a, b)=> a-b);
+console.log(arrSorting);
+
+// Removing Duplicates from an Array
+const arrDup = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArr = [...new Set(arrDup)]
+console.log(uniqueArr); 
