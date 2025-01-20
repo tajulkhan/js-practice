@@ -91,3 +91,37 @@ document.querySelector("#parent").addEventListener("click", function(event) {
     console.log("Button clicked!");
   }
 });
+
+// Promise with Async/Await
+// Handling asynchronous code with Promises and async/await:
+
+function fetchDatas() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Data fetched!"), 2000);
+  });
+}
+
+async function getData() {
+  try {
+    const result = await fetchDatas();
+    console.log(result); // "Data fetched!"
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getData();
+
+
+// Array Map and Filter
+
+// Map transforms each element of the array:
+
+const arrMap = [1, 2, 3];
+const doubled = arrMap.map(x => x * 2);
+console.log(doubled); // [2, 4, 6]
+
+// Filter filters elements based on a condition:
+const numbersE = [1, 2, 3, 4, 5];
+const evenNumbers = numbersE.filter(x => x % 2 === 0);
+console.log(evenNumbers); // [2, 4]
