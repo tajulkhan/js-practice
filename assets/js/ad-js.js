@@ -125,3 +125,17 @@ console.log(doubled); // [2, 4, 6]
 const numbersE = [1, 2, 3, 4, 5];
 const evenNumbers = numbersE.filter(x => x % 2 === 0);
 console.log(evenNumbers); // [2, 4]
+
+
+function modifyArray(arrCb, callback) {
+  // do something to arr here
+  arrCb.push(100);
+  // then execute the callback function that was passed
+  callback();
+}
+
+var arrCb = [1, 2, 3, 4, 5];
+
+modifyArray(arrCb, function() {
+  console.log("array has been modified", arrCb);
+});
