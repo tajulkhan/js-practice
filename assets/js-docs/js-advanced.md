@@ -7,3 +7,15 @@
 3. **What are Promises and why are they used?**
     Answer: Promises are used to handle asynchronous operations in JavaScript. They represent a value that may be available now, or in the future, or never. Promises provide a more readable and cleaner way to handle asynchronous code compared to traditional callback methods.
 
+4. **What are the differences between ES5 and ES6?**
+    Answer: ES6 (ECMAScript 2015) introduced many new features compared to ES5, such as:
+
+    Arrow functions
+    Classes
+    Template literals
+    Default parameters
+    Rest and spread operators
+    Let and const
+    Promises
+    Modules
+    Destructuring assignment
