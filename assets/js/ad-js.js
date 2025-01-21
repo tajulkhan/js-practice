@@ -165,8 +165,17 @@ let promise = new Promise((resolve, reject) => {
 
 promise
   .then((value) => {
-    console.log(value); // logs 'Success!' after 1 second
+    console.log(value); 
   })
   .catch((error)=>{
     console.log(error)
   })
+  // What are Generators in JavaScript?
+  function* generatorFunction() {
+    yield 'Hello';
+    yield 'World';
+  }
+  
+  const generator = generatorFunction();
+  console.log(generator.next().value); 
+  console.log(generator.next().value); 
