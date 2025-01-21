@@ -139,3 +139,17 @@ var arrCb = [1, 2, 3, 4, 5];
 modifyArray(arrCb, function() {
   console.log("array has been modified", arrCb);
 });
+
+// Explain closures and provide an example
+function outerFunction() {
+  let outerVariable = 'I am outside!';
+  
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  
+  return innerFunction;
+}
+
+const myFunction = outerFunction();
+myFunction(); // logs 'I am outside!'
