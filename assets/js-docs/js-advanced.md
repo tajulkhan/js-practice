@@ -1,0 +1,2 @@
+1. **What is the Event Loop in JavaScript?**  
+    Answer: The Event Loop is a mechanism that allows JavaScript to perform non-blocking operations by offloading operations to the system kernel whenever possible. JavaScript is single-threaded, meaning it can do one thing at a time. The Event Loop checks the call stack and if it's empty, it takes the first task from the callback queue and pushes it onto the call stack, thus ensuring asynchronous callbacks are executed.
