@@ -165,17 +165,29 @@ let promise = new Promise((resolve, reject) => {
 
 promise
   .then((value) => {
-    console.log(value); 
+    console.log(value);
   })
-  .catch((error)=>{
+  .catch((error) => {
     console.log(error)
   })
-  // What are Generators in JavaScript?
-  function* generatorFunction() {
-    yield 'Hello';
-    yield 'World';
-  }
-  
-  const generator = generatorFunction();
-  console.log(generator.next().value); 
-  console.log(generator.next().value); 
+// What are Generators in JavaScript?
+function* generatorFunction() {
+  yield 'Hello';
+  yield 'World';
+}
+
+const generator = generatorFunction();
+console.log(generator.next().value);
+console.log(generator.next().value);
+
+// What is the purpose of Promise.all and Promise.race?
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 100, 'foo'));
+
+Promise.all([promise1, promise2]).then(values => {
+  console.log(values); // [3, 'foo']
+});
+
+Promise.race([promise1, promise2]).then(value => {
+  console.log(value); // 3
+});
