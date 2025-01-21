@@ -191,3 +191,16 @@ Promise.all([promise1, promise2]).then(values => {
 Promise.race([promise1, promise2]).then(value => {
   console.log(value); // 3
 });
+
+// Explain this keyword in arrow functions
+
+const person = {
+  name: 'John',
+  greet: function() {
+    setTimeout(() => {
+      console.log('Hello, ' + this.name);
+    }, 1000);
+  }
+};
+
+person.greet(); 
