@@ -204,3 +204,10 @@ const person = {
 };
 
 person.greet(); 
+// localStorage
+localStorage.setItem('key', 'value');
+console.log(localStorage.getItem('key')); // 'value'
+
+// sessionStorage
+sessionStorage.setItem('key', 'value');
+console.log(sessionStorage.getItem('key')); // 'value'
