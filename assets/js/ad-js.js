@@ -221,4 +221,15 @@ console.log(int32View[0]); // 42
 let number = 123456.789;
 
 console.log(new Intl.NumberFormat('de-DE').format(number)); // "123.456,789"
-console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"
+console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"\
+
+
+// What are Set and WeakSet?
+
+let sets = new Set([1, 2, 3, 4, 4]);
+console.log(sets); // Set { 1, 2, 3, 4 }
+
+let weakSet = new WeakSet();
+let obj = {};
+weakSet.add(obj);
+console.log(weakSet.has(obj)); // true
