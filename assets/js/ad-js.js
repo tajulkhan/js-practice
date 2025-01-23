@@ -216,3 +216,9 @@ let buffer = new ArrayBuffer(16);
 let int32View = new Int32Array(buffer);
 int32View[0] = 42;
 console.log(int32View[0]); // 42
+
+// What is Intl and why is it used?
+let number = 123456.789;
+
+console.log(new Intl.NumberFormat('de-DE').format(number)); // "123.456,789"
+console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"
