@@ -209,6 +209,7 @@ localStorage.setItem('key', 'value');
 console.log(localStorage.getItem('key')); // 'value'
 
 // sessionStorage
+
 sessionStorage.setItem('key', 'value');
 console.log(sessionStorage.getItem('key')); // 'value'
 // Explain ArrayBuffer and TypedArray.
@@ -221,8 +222,7 @@ console.log(int32View[0]); // 42
 let number = 123456.789;
 
 console.log(new Intl.NumberFormat('de-DE').format(number)); // "123.456,789"
-console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"\
-
+console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"
 
 // What are Set and WeakSet?
 
@@ -233,3 +233,4 @@ let weakSet = new WeakSet();
 let obj = {};
 weakSet.add(obj);
 console.log(weakSet.has(obj)); // true
+
