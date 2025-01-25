@@ -242,3 +242,12 @@ isPalindrome("hello");   // Output: false
 sumArray([1, 2, 3, 4]); // Output: 10
 sumArray([-1, 0, 5]);   // Output: 4
 
+
+// Find the Largest Number
+findLargest([1, 5, 3, 9, 2]); // Output: 9
+findLargest([-10, -3, -5]);   // Output: -3
+
+// Count Vowels
+countVowels("hello world"); // Output: 3
+countVowels("why?");        // Output: 0
+
