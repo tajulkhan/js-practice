@@ -251,3 +251,15 @@ findLargest([-10, -3, -5]);   // Output: -3
 countVowels("hello world"); // Output: 3
 countVowels("why?");        // Output: 0
 
+// Implement Stack
+// Create a class Stack with the following methods:
+// push(element) → Add an element to the stack.
+// pop() → Remove the top element from the stack.
+// peek() → Get the top element of the stack.
+// isEmpty() → Check if the stack is empty.
+const stack = new Stack();
+stack.push(10);
+stack.push(20);
+console.log(stack.peek());   // Output: 20
+console.log(stack.pop());    // Output: 20
+console.log(stack.isEmpty()); // Output: false
