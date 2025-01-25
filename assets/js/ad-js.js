@@ -263,3 +263,30 @@ stack.push(20);
 console.log(stack.peek());   // Output: 20
 console.log(stack.pop());    // Output: 20
 console.log(stack.isEmpty()); // Output: false
+
+
+// Problem: Reverse an Array
+// Write a function to reverse an array in place without using built-in methods like reverse.
+function reverseArray(arr) {
+  let left = 0;               // Start pointer
+  let right = arr.length - 1; // End pointer
+
+  while (left < right) {
+      // Swap elements at left and right pointers
+      let temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+
+      // Move pointers
+      left++;
+      right--;
+  }
+
+  return arr;
+}
+
+// Test Cases
+console.log(reverseArray([1, 2, 3, 4]));     // Output: [4, 3, 2, 1]
+console.log(reverseArray(["a", "b", "c"]));  // Output: ["c", "b", "a"]
+console.log(reverseArray([10]));            // Output: [10]
+console.log(reverseArray([]));              // Output: []
