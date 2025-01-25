@@ -84,3 +84,12 @@ function doPost(e) {
       .setHeader("Access-Control-Allow-Headers", "Content-Type");
   }
   
+
+
+   // Send the request to the Apps Script URL
+
+   const response = await fetch(sheetFormUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });

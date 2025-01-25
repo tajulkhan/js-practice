@@ -234,3 +234,11 @@ let obj = {};
 weakSet.add(obj);
 console.log(weakSet.has(obj)); // true
 
+// isPalindrome
+isPalindrome("racecar"); // Output: true
+isPalindrome("hello");   // Output: false
+
+// Sum of an Array
+sumArray([1, 2, 3, 4]); // Output: 10
+sumArray([-1, 0, 5]);   // Output: 4
+
