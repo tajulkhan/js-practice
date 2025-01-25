@@ -290,3 +290,34 @@ console.log(reverseArray([1, 2, 3, 4]));     // Output: [4, 3, 2, 1]
 console.log(reverseArray(["a", "b", "c"]));  // Output: ["c", "b", "a"]
 console.log(reverseArray([10]));            // Output: [10]
 console.log(reverseArray([]));              // Output: []
+
+
+
+// Problem: Check for Palindrome
+
+function isPalindrome(str) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+  // Use two pointers to check for palindrome
+  let left = 0;
+  let right = cleanStr.length - 1;
+
+  while (left < right) {
+      if (cleanStr[left] !== cleanStr[right]) {
+          return false; // Not a palindrome
+      }
+      left++;
+      right--;
+  }
+
+  return true; // It's a palindrome
+}
+
+// Test Cases
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
+console.log(isPalindrome("racecar"));                        // Output: true
+console.log(isPalindrome("hello"));                          // Output: false
+console.log(isPalindrome("No 'x' in Nixon"));                // Output: true
+console.log(isPalindrome("12321"));                          // Output: true
+console.log(isPalindrome("12345"));                          // Output: false
