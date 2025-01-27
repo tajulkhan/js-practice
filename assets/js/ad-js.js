@@ -1,11 +1,12 @@
 async function fetchSequentialData() {
-  const postData = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const postData = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await postData.json();
 
-  const userData = await fetch(`https://jsonplaceholder.typicode.com/users/${posts[0].userId}`);
+  const userData = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${posts[0].userId}`
+  );
   const user = await userData.json();
   console.log(user);
-
 
   console.log(user.name);
 }
@@ -29,24 +30,24 @@ if (x && y) {
 }
 
 if (x || z) {
-  console.log("Code runs");  // This block runs because x || y returns 220(Truthy)
+  console.log("Code runs"); // This block runs because x || y returns 220(Truthy)
 }
 
 const set = new Set([1, 2, 3, 3]);
 console.log(set); // Set { 1, 2, 3 }
 
 const map = new Map();
-map.set('key', 'value');
-console.log(map.get('key')); // 'value'
+map.set("key", "value");
+console.log(map.get("key")); // 'value'
 
 for (let i = 0; i < 10; i++) {
-  if (i === 5) continue;  // Skips when i equals 5
-  if (i === 8) break;     // Breaks the loop when i equals 8
-  console.log(i);         // Outputs 0, 1, 2, 3, 4, 6, 7
+  if (i === 5) continue; // Skips when i equals 5
+  if (i === 8) break; // Breaks the loop when i equals 8
+  console.log(i); // Outputs 0, 1, 2, 3, 4, 6, 7
 }
 
 async function fetchData() {
-  const urls = ['url1', 'url2', 'url3'];
+  const urls = ["url1", "url2", "url3"];
   for (const url of urls) {
     const response = await fetch(url);
     const data = await response.json();
@@ -60,7 +61,6 @@ const min = Math.min(...numbers);
 console.log(max);
 console.log(min);
 
-
 // Reversing an Array
 const arr = [1, 2, 3, 4];
 const reversedArr = arr.reverse();
@@ -68,8 +68,8 @@ console.log(reversedArr);
 
 // Checking if a String is a Palindrome
 function isPalindrome(str) {
-  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-  return cleanedStr === cleanedStr.split('').reverse().join('');
+  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+  return cleanedStr === cleanedStr.split("").reverse().join("");
 }
 
 console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
@@ -81,7 +81,7 @@ console.log(arrSorting);
 
 // Removing Duplicates from an Array
 const arrDup = [1, 2, 2, 3, 4, 4, 5];
-const uniqueArr = [...new Set(arrDup)]
+const uniqueArr = [...new Set(arrDup)];
 console.log(uniqueArr);
 
 // Event Delegation
@@ -112,20 +112,18 @@ async function getData() {
 
 getData();
 
-
 // Array Map and Filter
 
 // Map transforms each element of the array:
 
 const arrMap = [1, 2, 3];
-const doubled = arrMap.map(x => x * 2);
+const doubled = arrMap.map((x) => x * 2);
 console.log(doubled); // [2, 4, 6]
 
 // Filter filters elements based on a condition:
 const numbersE = [1, 2, 3, 4, 5];
-const evenNumbers = numbersE.filter(x => x % 2 === 0);
+const evenNumbers = numbersE.filter((x) => x % 2 === 0);
 console.log(evenNumbers); // [2, 4]
-
 
 function modifyArray(arrCb, callback) {
   // do something to arr here
@@ -142,7 +140,7 @@ modifyArray(arrCb, function () {
 
 // Explain closures and provide an example
 function outerFunction() {
-  let outerVariable = 'I am outside!';
+  let outerVariable = "I am outside!";
 
   function innerFunction() {
     console.log(outerVariable);
@@ -154,12 +152,11 @@ function outerFunction() {
 const myFunction = outerFunction();
 myFunction(); // logs 'I am outside!'
 
-
-// What are Promises and why are they used? Resolve and Reject 
+// What are Promises and why are they used? Resolve and Reject
 let promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     // resolve('Success!');
-    reject('Failed!');
+    reject("Failed!");
   }, 1000);
 });
 
@@ -168,12 +165,12 @@ promise
     console.log(value);
   })
   .catch((error) => {
-    console.log(error)
-  })
+    console.log(error);
+  });
 // What are Generators in JavaScript?
 function* generatorFunction() {
-  yield 'Hello';
-  yield 'World';
+  yield "Hello";
+  yield "World";
 }
 
 const generator = generatorFunction();
@@ -182,36 +179,38 @@ console.log(generator.next().value);
 
 // What is the purpose of Promise.all and Promise.race?
 const promise1 = Promise.resolve(3);
-const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 100, 'foo'));
+const promise2 = new Promise((resolve, reject) =>
+  setTimeout(resolve, 100, "foo")
+);
 
-Promise.all([promise1, promise2]).then(values => {
+Promise.all([promise1, promise2]).then((values) => {
   console.log(values); // [3, 'foo']
 });
 
-Promise.race([promise1, promise2]).then(value => {
+Promise.race([promise1, promise2]).then((value) => {
   console.log(value); // 3
 });
 
 // Explain this keyword in arrow functions
 
 const person = {
-  name: 'John',
-  greet: function() {
+  name: "John",
+  greet: function () {
     setTimeout(() => {
-      console.log('Hello, ' + this.name);
+      console.log("Hello, " + this.name);
     }, 1000);
-  }
+  },
 };
 
-person.greet(); 
+person.greet();
 // localStorage
-localStorage.setItem('key', 'value');
-console.log(localStorage.getItem('key')); // 'value'
+localStorage.setItem("key", "value");
+console.log(localStorage.getItem("key")); // 'value'
 
 // sessionStorage
 
-sessionStorage.setItem('key', 'value');
-console.log(sessionStorage.getItem('key')); // 'value'
+sessionStorage.setItem("key", "value");
+console.log(sessionStorage.getItem("key")); // 'value'
 // Explain ArrayBuffer and TypedArray.
 let buffer = new ArrayBuffer(16);
 let int32View = new Int32Array(buffer);
@@ -221,8 +220,8 @@ console.log(int32View[0]); // 42
 // What is Intl and why is it used?
 let number = 123456.789;
 
-console.log(new Intl.NumberFormat('de-DE').format(number)); // "123.456,789"
-console.log(new Intl.NumberFormat('en-IN').format(number)); // "1,23,456.789"
+console.log(new Intl.NumberFormat("de-DE").format(number)); // "123.456,789"
+console.log(new Intl.NumberFormat("en-IN").format(number)); // "1,23,456.789"
 
 // What are Set and WeakSet?
 
@@ -236,20 +235,19 @@ console.log(weakSet.has(obj)); // true
 
 // isPalindrome
 isPalindrome("racecar"); // Output: true
-isPalindrome("hello");   // Output: false
+isPalindrome("hello"); // Output: false
 
 // Sum of an Array
 sumArray([1, 2, 3, 4]); // Output: 10
-sumArray([-1, 0, 5]);   // Output: 4
-
+sumArray([-1, 0, 5]); // Output: 4
 
 // Find the Largest Number
 findLargest([1, 5, 3, 9, 2]); // Output: 9
-findLargest([-10, -3, -5]);   // Output: -3
+findLargest([-10, -3, -5]); // Output: -3
 
 // Count Vowels
 countVowels("hello world"); // Output: 3
-countVowels("why?");        // Output: 0
+countVowels("why?"); // Output: 0
 
 // Implement Stack
 // Create a class Stack with the following methods:
@@ -260,55 +258,52 @@ countVowels("why?");        // Output: 0
 const stack = new Stack();
 stack.push(10);
 stack.push(20);
-console.log(stack.peek());   // Output: 20
-console.log(stack.pop());    // Output: 20
+console.log(stack.peek()); // Output: 20
+console.log(stack.pop()); // Output: 20
 console.log(stack.isEmpty()); // Output: false
-
 
 // Problem: Reverse an Array
 // Write a function to reverse an array in place without using built-in methods like reverse.
 function reverseArray(arr) {
-  let left = 0;               // Start pointer
+  let left = 0; // Start pointer
   let right = arr.length - 1; // End pointer
 
   while (left < right) {
-      // Swap elements at left and right pointers
-      let temp = arr[left];
-      arr[left] = arr[right];
-      arr[right] = temp;
+    // Swap elements at left and right pointers
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
 
-      // Move pointers
-      left++;
-      right--;
+    // Move pointers
+    left++;
+    right--;
   }
 
   return arr;
 }
 
 // Test Cases
-console.log(reverseArray([1, 2, 3, 4]));     // Output: [4, 3, 2, 1]
-console.log(reverseArray(["a", "b", "c"]));  // Output: ["c", "b", "a"]
-console.log(reverseArray([10]));            // Output: [10]
-console.log(reverseArray([]));              // Output: []
-
-
+console.log(reverseArray([1, 2, 3, 4])); // Output: [4, 3, 2, 1]
+console.log(reverseArray(["a", "b", "c"])); // Output: ["c", "b", "a"]
+console.log(reverseArray([10])); // Output: [10]
+console.log(reverseArray([])); // Output: []
 
 // Problem: Check for Palindrome
 
 function isPalindrome(str) {
   // Remove non-alphanumeric characters and convert to lowercase
-  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
 
   // Use two pointers to check for palindrome
   let left = 0;
   let right = cleanStr.length - 1;
 
   while (left < right) {
-      if (cleanStr[left] !== cleanStr[right]) {
-          return false; // Not a palindrome
-      }
-      left++;
-      right--;
+    if (cleanStr[left] !== cleanStr[right]) {
+      return false; // Not a palindrome
+    }
+    left++;
+    right--;
   }
 
   return true; // It's a palindrome
@@ -316,8 +311,8 @@ function isPalindrome(str) {
 
 // Test Cases
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
-console.log(isPalindrome("racecar"));                        // Output: true
-console.log(isPalindrome("hello"));                          // Output: false
-console.log(isPalindrome("No 'x' in Nixon"));                // Output: true
-console.log(isPalindrome("12321"));                          // Output: true
-console.log(isPalindrome("12345"));                          // Output: false
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+console.log(isPalindrome("No 'x' in Nixon")); // Output: true
+console.log(isPalindrome("12321")); // Output: true
+console.log(isPalindrome("12345")); // Output: false
