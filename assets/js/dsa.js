@@ -132,3 +132,11 @@ function sumArray(arr) {
 }
 
 console.log(sumArray([1, 2, 3, 4])); // Output: 10
+
+// Count Vowels in a String
+function countVowels(str) {
+  const vowels = "aeiou";
+  return str.split('').filter(char => vowels.includes(char.toLowerCase())).length;
+}
+
+console.log(countVowels("hello")); // Output: 2
