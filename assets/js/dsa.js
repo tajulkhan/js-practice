@@ -106,3 +106,11 @@ Fizz
 14
 FizzBuzz
 */
+// Find the Largest Number in an Array
+const arrLg = [1, 3, 7, 2, 5];
+function findLargest(arr) {
+  return Math.max(...arr); // Spread the array to pass individual values to Math.max
+}
+console.log(findLargest(arrLg)); // Output: 7
+
+
