@@ -188,3 +188,13 @@ const arrayLike = {
 // Convert to an array using Array.from()
 const arr = Array.from(arrayLike);
 console.log(arrayLike); // Output: ["apple", "banana", "cherry"]
+
+
+// Arguments Object (Array-like)
+
+function showArguments() {
+  console.log(arguments); // Array-like object
+  console.log(Array.from(arguments)); // Convert to array
+}
+
+showArguments(1, 2, 3, 4);
