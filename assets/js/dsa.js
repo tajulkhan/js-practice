@@ -156,3 +156,13 @@ function removeDuplicates(arr) {
 }
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // Output: [1, 2, 3, 4, 5]
+
+
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log(`Outer: ${outerVariable}, Inner: ${innerVariable}`);
+  };
+}
+
+const newFunction = outerFunction("Hello");
+newFunction("World"); // Output: Outer: Hello, Inner: World
