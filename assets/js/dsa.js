@@ -157,7 +157,7 @@ function removeDuplicates(arr) {
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // Output: [1, 2, 3, 4, 5]
 
-
+// Closures
 function outerFunction(outerVariable) {
   return function innerFunction(innerVariable) {
     console.log(`Outer: ${outerVariable}, Inner: ${innerVariable}`);
@@ -166,3 +166,14 @@ function outerFunction(outerVariable) {
 
 const newFunction = outerFunction("Hello");
 newFunction("World"); // Output: Outer: Hello, Inner: World
+
+//  Higher-Order Functions
+function multiplyBy(factor) {
+  return function (num) {
+    return num * factor;
+  };
+}
+
+const double = multiplyBy(2);
+console.log(double(5)); // Output: 10
+
