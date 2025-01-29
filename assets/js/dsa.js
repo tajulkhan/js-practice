@@ -177,3 +177,14 @@ function multiplyBy(factor) {
 const double = multiplyBy(2);
 console.log(double(5)); // Output: 10
 
+// Array-Like Objects
+const arrayLike = {
+  0: "apple",
+  1: "banana",
+  2: "cherry",
+  length: 3, // Important for conversion
+};
+
+// Convert to an array using Array.from()
+const arr = Array.from(arrayLike);
+console.log(arrayLike); // Output: ["apple", "banana", "cherry"]
