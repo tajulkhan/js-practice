@@ -198,3 +198,50 @@ function showArguments() {
 }
 
 showArguments(1, 2, 3, 4);
+
+// NodeList & HTMLCollection (Array-like)
+
+const divs = document.querySelectorAll("div"); // Returns a NodeList
+console.log("divs", divs.length); // Can access length like an array
+console.log([...divs]); // Convert to an array
+
+// Typed Arrays (Efficient Arrays)
+
+const buffer = new ArrayBuffer(16); // 16-byte buffer
+const intArray = new Int32Array(buffer);
+intArray[0] = 42;
+
+console.log(intArray[0]); // Output: 42
+
+// Map (Object-like but ordered)
+const userMap = new Map();
+userMap.set("name", "Taj");
+userMap.set("age", 30);
+
+console.log(userMap.get("name")); // Output: Taj
+console.log([...userMap]); // Convert to an array
+
+// Set (Array-like but unique values)
+const uniqueNumbers = new Set([1, 2, 3, 3, 4]);
+console.log([...uniqueNumbers]); // Output: [1, 2, 3, 4]
+
+// String (Behaves like an array)
+const str = "hello";
+console.log(str[1]); // Output: e
+console.log(Array.from(str)); // Convert to array
+
+// Custom Array-like Object
+
+const customArray = {
+  0: "a",
+  1: "b",
+  2: "c",
+  length: 3,
+  forEach(callback) {
+    for (let i = 0; i < this.length; i++) {
+      callback(this[i], i, this);
+    }
+  },
+};
+
+customArray.forEach((value, index) => console.log(value, index));
