@@ -245,3 +245,20 @@ const customArray = {
 };
 
 customArray.forEach((value, index) => console.log(value, index));
+
+// Factorial Using Recursion
+// How It Works?
+
+// factorial(5) → 5 * factorial(4)
+// factorial(4) → 4 * factorial(3)
+// factorial(3) → 3 * factorial(2)
+// factorial(2) → 2 * factorial(1)
+// factorial(1) → 1 (Base case stops recursion)
+function factorials(n) {
+  if (n === 1) return 1; // Base case (stopping condition)
+  return n * factorials(n - 1); // Recursive call
+}
+
+console.log(factorials(5)); // Output: 120
+
+
