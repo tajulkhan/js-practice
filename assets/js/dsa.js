@@ -284,3 +284,11 @@ function fibonacciMemo(n, memo = {}) {
 }
 
 console.log(fibonacciMemo(6)); // Output: 8
+
+// Sum of Array Using Recursion
+function sumArray(arr, index = 0) {
+  if (index === arr.length) return 0; // Base case
+  return arr[index] + sumArray(arr, index + 1); // Recursive call
+}
+
+console.log(sumArray([2, 4, 6])); // Output: 12
