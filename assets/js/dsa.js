@@ -262,3 +262,25 @@ function factorials(n) {
 console.log(factorials(5)); // Output: 120
 
 
+// Fibonacci Series Using Recursion
+// Problem: Find the nth Fibonacci number, where:
+// fib(0) = 0
+// fib(1) = 1
+// fib(n) = fib(n-1) + fib(n-2)
+function fibonacci(n) {
+  if (n <= 1) return n; // Base case
+  return fibonacci(n - 1) + fibonacci(n - 2); // Recursive call
+}
+
+console.log(fibonacci(6)); // Output: 8
+
+// Optimized Fibonacci (Using Memoization)
+function fibonacciMemo(n, memo = {}) {
+  if (n in memo) return memo[n]; // Check if already computed
+  if (n <= 1) return n; // Base case
+
+  memo[n] = fibonacciMemo(n - 1, memo) + fibonacciMemo(n - 2, memo); // Store result
+  return memo[n];
+}
+
+console.log(fibonacciMemo(6)); // Output: 8
