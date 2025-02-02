@@ -369,5 +369,40 @@ console.log("Event loop end");
 
 // 2️⃣ How JavaScript Handles Asynchronous Code
 
+// 🛠 JavaScript uses three parts to manage execution: 1️⃣ Call Stack – Executes synchronous code (one at a time).
+// 2️⃣ Web APIs – Handles async tasks (setTimeout, fetch, etc.).
+// 3️⃣ Task Queue & Microtask Queue – Stores callbacks to execute later.
 
+// 👉 Microtasks (Promises, async/await) always run before macrotasks (setTimeout, setInterval).
 
+// 3️⃣ Microtask vs. Macrotask Example
+console.log("Start");
+
+setTimeout(() => console.log("Macrotask: setTimeout"), 0);
+
+Promise.resolve().then(() => console.log("Microtask: Promise"));
+
+console.log("End");
+
+// 💪 Challenge Problem:
+// What will be the output of this? 1, 4, 3, 2
+console.log("1");
+
+setTimeout(() => console.log("2"), 0);
+
+Promise.resolve().then(() => console.log("3"));
+
+console.log("4");
+
+console.log("A");
+
+setTimeout(() => console.log("B"), 0);
+
+Promise.resolve().then(() => console.log("C"));
+
+Promise.resolve().then(() => {
+  console.log("D");
+  setTimeout(() => console.log("E"), 0);
+});
+
+console.log("F");
