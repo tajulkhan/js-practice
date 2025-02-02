@@ -331,3 +331,13 @@ const triple = multiplier(3);
 
 console.log(doubles(5)); // Output: 50
 console.log(triple(5)); // Output: 15
+
+// 3. Delayed Execution (setTimeout Example)
+// Closures help retain values inside asynchronous functions.
+function dMsg(dmsg, dly){
+   setTimeout(function(){
+    console.log(dmsg);
+    
+   }, dly)
+}
+dMsg("Hi taj how are you ", 2000)
