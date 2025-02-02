@@ -290,3 +290,30 @@ function sumArray(arr, index = 0) {
   return arr[index] + sumArray(arr, index + 1); // Recursive call
 }
 console.log(sumArray([2, 4, 6])); // Output: 12
+
+// Practical Use Cases of Closures
+// Private Variables using Closures
+// Closures can be used to create private variables, meaning they cannot be accessed from outside the function.
+
+function counter() {
+  let count = 0; // Private variable
+
+  return {
+      increment: function () {
+          count++;
+          console.log(count);
+      },
+      decrement: function () {
+          count--;
+          console.log(count);
+      },
+      getCount: function () {
+          return count;
+      }
+  };
+}
+
+const myCounter = counter();
+myCounter.increment(); // Output: 1
+myCounter.increment(); // Output: 2
+console.log(myCounter.getCount()); // Output: 2
