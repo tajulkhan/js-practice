@@ -317,3 +317,17 @@ const myCounter = counter();
 myCounter.increment(); // Output: 1
 myCounter.increment(); // Output: 2
 console.log(myCounter.getCount()); // Output: 2
+
+// 2. Function Factory (Generating Functions Dynamically)
+// Closures allow us to generate multiple versions of a function dynamically.
+function multiplier(factor) {
+  return function (num) {
+      return num * factor;
+  };
+}
+
+const doubles = multiplier(10);
+const triple = multiplier(3);
+
+console.log(doubles(5)); // Output: 50
+console.log(triple(5)); // Output: 15
