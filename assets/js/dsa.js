@@ -359,6 +359,15 @@ for (var i = 1; i <= 3; i++) {
 }
 
 // Event Loop
+// 1️⃣ Example of Event Loop in Action
+console.log("Start event loop");
+setTimeout(()=>{
+  console.log("Interval");
+  
+}, 0)
+console.log("Event loop end");
+
+// 2️⃣ How JavaScript Handles Asynchronous Code
 
 
 
