@@ -341,3 +341,33 @@ function dMsg(dmsg, dly){
    }, dly)
 }
 dMsg("Hi taj how are you ", 2000)
+
+// 4. Loop Issue (Fixing var in Loops)
+// ❌ Problem: Using var inside setTimeout
+// for (var i = 1; i <= 3; i++) {
+//   setTimeout(() => {
+//       console.log(i); // Prints 4, 4, 4 (wrong!)
+//   }, i * 1000);
+// }
+// ✅ Fix: Use Closure (IIFE)
+for (var i = 1; i <= 3; i++) {
+  (function (x) {
+      setTimeout(() => {
+          console.log(x); // Prints 1, 2, 3 (correct!)
+      }, x * 1000);
+  })(i);
+}
+
+// Event Loop
+// 1️⃣ Example of Event Loop in Action
+console.log("Start event loop");
+setTimeout(()=>{
+  console.log("Interval");
+  
+}, 0)
+console.log("Event loop end");
+
+// 2️⃣ How JavaScript Handles Asynchronous Code
+
+
+
