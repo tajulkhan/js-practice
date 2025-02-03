@@ -423,3 +423,9 @@ if (true) {
   console.log(y); // 20
 }
 console.log(y); // 10 (Outside value remains unchanged)
+
+const obj = { name: "Taj" };
+obj.name = "Super Taj";
+console.log(obj); // ✅ Output: { name: 'Super Taj' }
+
+
