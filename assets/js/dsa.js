@@ -432,8 +432,19 @@ console.log(obj); // ✅ Output: { name: 'Super Taj' }
 // Attempting to modify user.age does not change the property because the object is frozen.
 // So, even though user.age = 31; was attempted, the change is ignored.
 
+// spread operator 
 const user = { name: "Taj", age: 30 };
 Object.freeze(user);
 user.age = 31;
 console.log(user);
+
+const a = [1, 2, 3];
+const b = [...a];
+b[0] = 10;
+console.log(a, b);
+const arr1 = [1, 2, 3];
+const arr2 = arr1;
+arr2[0] = 10;
+console.log(arr1, arr2);
+
 
