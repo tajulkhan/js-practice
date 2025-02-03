@@ -406,3 +406,20 @@ Promise.resolve().then(() => {
 });
 
 console.log("F");
+
+// ES6
+// (Old Way - Function Scoped)
+var x = 10;
+if (true) {
+  var x = 20; // Same variable is modified
+  console.log(x); // 20
+}
+console.log(x); // 20 (Oops! `x` changed outside too)
+
+// let (Block Scoped)
+let y = 10;
+if (true) {
+  let y = 20; // Different variable inside the block
+  console.log(y); // 20
+}
+console.log(y); // 10 (Outside value remains unchanged)
