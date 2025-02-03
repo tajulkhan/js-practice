@@ -428,4 +428,12 @@ const obj = { name: "Taj" };
 obj.name = "Super Taj";
 console.log(obj); // ✅ Output: { name: 'Super Taj' }
 
+// Object.freeze(user) makes the user object immutable.
+// Attempting to modify user.age does not change the property because the object is frozen.
+// So, even though user.age = 31; was attempted, the change is ignored.
+
+const user = { name: "Taj", age: 30 };
+Object.freeze(user);
+user.age = 31;
+console.log(user);
 
