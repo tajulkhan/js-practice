@@ -470,6 +470,7 @@ transactions.forEach(transaction => {
 console.log("Total Debit Amount =", total);
 
 // Find the First Non-Repeating Character in a String
+// Solution Using Map
 const firstUniqueChar = (s) => {
   let charCount = new Map();
 
@@ -490,3 +491,17 @@ const firstUniqueChar = (s) => {
 
 const result = firstUniqueChar("aabbccdefg");
 console.log("First Non-Repeating Character:", result);
+
+// Alternative Approach (Using reduce())
+
+const firstNonRepeating = (s) => {
+  let frequency = [...s].reduce((acc, char) => {
+    acc[char] = (acc[char] || 0) + 1;
+    return acc;
+  }, {});
+
+  return [...s].find(char => frequency[char] === 1) || null;
+};
+
+console.log("First Non-Repeating Character:", firstNonRepeating("aabbccdefg"));
+
