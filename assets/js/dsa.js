@@ -505,3 +505,36 @@ const firstNonRepeating = (s) => {
 
 console.log("First Non-Repeating Character:", firstNonRepeating("aabbccdefg"));
 
+// ✅ Why is This Useful?
+// Helps in data stream processing.
+// Used in parsing unique words.
+// Common in interview questions.
+
+// Find the Longest Consecutive Sequence in an Array
+const longestConsecutive = (nums) => {
+  if (nums.length === 0) return 0;
+
+  let numSet = new Set(nums);
+  let maxLength = 0;
+
+  for (let num of numSet) {
+    // Check if it's the start of a sequence
+    if (!numSet.has(num - 1)) {
+      let currentNum = num;
+      let currentStreak = 1;
+
+      // Count the streak
+      while (numSet.has(currentNum + 1)) {
+        currentNum++;
+        currentStreak++;
+      }
+
+      maxLength = Math.max(maxLength, currentStreak);
+    }
+  }
+
+  return maxLength;
+};
+
+const nums = [100, 4, 200, 1, 3, 2];
+console.log("Longest Consecutive Sequence Length:", longestConsecutive(nums));
