@@ -538,3 +538,21 @@ const longestConsecutive = (nums) => {
 
 const nums = [100, 4, 200, 1, 3, 2];
 console.log("Longest Consecutive Sequence Length:", longestConsecutive(nums));
+
+// Using Boyer-Moore Voting Algorithm (Optimal)
+const majorityElements = (numsV) => {
+  let count = 0;
+  let candidate = null;
+
+  for (let num of numsV) {
+    if (count === 0) {
+      candidate = num;
+    }
+    count += (num === candidate) ? 1 : -1;
+  }
+
+  return candidate;
+};
+
+const numsV = [3, 3, 4, 2, 3, 3, 3, 2, 3];
+console.log("Majority Element:", majorityElements(numsV));
