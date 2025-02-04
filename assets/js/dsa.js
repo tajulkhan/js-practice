@@ -447,4 +447,25 @@ const arr2 = arr1;
 arr2[0] = 10;
 console.log(arr1, arr2);
 
+// 🔥 Advanced Array Concepts in JavaScript
+
+const transactions = [
+  { id: 1, type: "credit", amount: 500 },
+  { id: 2, type: "debit", amount: 200 },
+  { id: 3, type: "debit", amount: 100 }
+];
+const totalDebit = transactions
+  .filter(transaction => transaction.type === "debit")  // Get only debit transactions
+  .reduce((sum, transaction) => sum + transaction.amount, 0); // Sum up debit amounts
+
+console.log("Total Debit Amount =", totalDebit);
+
+// Alternative 
+let total = 0;
+transactions.forEach(transaction => {
+  if (transaction.type === "debit") {
+    total += transaction.amount;
+  }
+});
+console.log("Total Debit Amount =", total);
 
