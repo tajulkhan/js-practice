@@ -469,3 +469,24 @@ transactions.forEach(transaction => {
 });
 console.log("Total Debit Amount =", total);
 
+// Find the First Non-Repeating Character in a String
+const firstUniqueChar = (s) => {
+  let charCount = new Map();
+
+  // Count occurrences of each character
+  for (let char of s) {
+    charCount.set(char, (charCount.get(char) || 0) + 1);
+  }
+
+  // Find the first character with count 1
+  for (let char of s) {
+    if (charCount.get(char) === 1) {
+      return char;
+    }
+  }
+
+  return null;
+};
+
+const result = firstUniqueChar("aabbccdefg");
+console.log("First Non-Repeating Character:", result);
