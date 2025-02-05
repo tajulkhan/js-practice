@@ -556,3 +556,34 @@ const majorityElements = (numsV) => {
 
 const numsV = [3, 3, 4, 2, 3, 3, 3, 2, 3];
 console.log("Majority Element:", majorityElements(numsV));
+
+
+const findSubarraysWithSum = (arrs, target) => {
+  let sumMap = new Map();
+  let result = [];
+  let sum = 0;
+
+  sumMap.set(0, [-1]); // To handle cases where a subarrsay starts from index 0
+
+  for (let i = 0; i < arrs.length; i++) {
+    sum += arrs[i];
+
+    if (sumMap.has(sum - target)) {
+      let indices = sumMap.get(sum - target);
+      for (let startIdx of indices) {
+        result.push(arrs.slice(startIdx + 1, i + 1));
+      }
+    }
+
+    if (!sumMap.has(sum)) {
+      sumMap.set(sum, []);
+    }
+    sumMap.get(sum).push(i);
+  }
+
+  return result;
+};
+
+const arrs = [1, 2, 3, 4, 2, 1, 5];
+const target = 5;
+console.log("Subarrsays with sum", target, ":", findSubarraysWithSum(arr, target));
