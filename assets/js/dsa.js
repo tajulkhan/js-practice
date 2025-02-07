@@ -678,8 +678,25 @@ const removeDuplicates = (arr) => {
       uniqueArr.push(num);
     }
   }
-  return uniqueArr;
+  return uniqueArr; 
 };
 
 const arrRdF = [1, 2, 3, 4, 2, 3, 5, 6, 1, 7];
 console.log("Unique values:", removeDuplicates(arrRdF));
+
+// Reverse an Array Without Using reverse()
+const reverseArray = (arr) => {
+  let reversed = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+};
+
+const arrRvrs = [1, 2, 3, 4, 5];
+console.log("Reversed array:", reverseArray(arrRvrs));
+
+// 🔹 slice() ensures the original array is not modified.
+// 🔹 reverse() quickly reverses the array.
+const arrslice = [1, 2, 3, 4, 5];
+console.log(arrslice.slice().reverse());
