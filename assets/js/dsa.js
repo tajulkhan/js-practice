@@ -592,3 +592,8 @@ console.log("Subarrsays with sum", target, ":", findSubarraysWithSum(arr, target
 const findMax = (arr) => Math.max(...arr);
 const arrMax = [10, 5, 20, 8, 25, 15];
 console.log("Maximum number:", findMax(arrMax));
+
+// Sum of All Numbers in an Array
+const findSum = (arr) => arr.reduce((sum, num) => sum + num, 0);
+const arrSum = [5, 10, 15, 20];
+console.log("Sum of array:", findSum(arrSum));
