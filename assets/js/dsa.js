@@ -602,3 +602,14 @@ console.log("Sum of array:", findSum(arrSum));
 const findMaxs = (arr)=> Math.max(...arr);
 const arrayMax=[10, 90, 89, 100];
 console.log(findMax(arrayMax));
+//Sum of All Using a for loop
+const findSumFor = (arr) => {
+  let sum = 0;
+  for (let num of arr) {
+    sum += num;
+  }
+  return sum;
+};
+
+const arrFor = [5, 10, 15, 20];
+console.log("Sum of array:", findSumFor(arrFor));
