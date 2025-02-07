@@ -660,3 +660,26 @@ const findEvenNumbers = (arr) => {
 
 const arrEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log("Even numbers:", findEvenNumbers(arrEven));
+
+// Remove Duplicates from an Array
+
+// Using Set (Best & Simplest Approach)
+const removeDuplicates = (arr) => [...new Set(arr)];
+
+const arrRd = [1, 2, 3, 4, 2, 3, 5, 6, 1, 7];
+console.log("Unique values:", removeDuplicates(arrRd));
+
+// Using a for loop & includes()
+
+const removeDuplicates = (arr) => {
+  let uniqueArr = [];
+  for (let num of arr) {
+    if (!uniqueArr.includes(num)) {
+      uniqueArr.push(num);
+    }
+  }
+  return uniqueArr;
+};
+
+const arrRdF = [1, 2, 3, 4, 2, 3, 5, 6, 1, 7];
+console.log("Unique values:", removeDuplicates(arrRdF));
