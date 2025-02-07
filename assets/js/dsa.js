@@ -632,3 +632,18 @@ const fEna =(arr)=>{
 }
 
 console.log("Even numbers:", fEna(arr));
+
+// findEvenNumbers for of 
+
+const findEvenNumbers = (arr) => {
+  let evenNumbers = [];
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      evenNumbers.push(num);
+    }
+  }
+  return evenNumbers;
+};
+
+const arrEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("Even numbers:", findEvenNumbers(arrEven));
