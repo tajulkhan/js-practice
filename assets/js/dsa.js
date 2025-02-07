@@ -613,3 +613,22 @@ const findSumFor = (arr) => {
 
 const arrFor = [5, 10, 15, 20];
 console.log("Sum of array:", findSumFor(arrFor));
+
+// Find the Even Numbers in an Array
+
+const fEn = (arr)=> arr.filter(num=> num % 2 ===0);
+const arrE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("Even numbers:", fEn(arrE));
+// Find the Even Numbers in an Array For loop
+const arrForE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const fEna =(arr)=>{
+    let evnArr=[];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] % 2 ===0){
+            evnArr.push(arr[i]);
+        }
+    }
+    return evnArr;
+}
+
+console.log("Even numbers:", fEna(arr));
