@@ -587,3 +587,8 @@ const findSubarraysWithSum = (arrs, target) => {
 const arrs = [1, 2, 3, 4, 2, 1, 5];
 const target = 5;
 console.log("Subarrsays with sum", target, ":", findSubarraysWithSum(arr, target));
+
+// Maximum Number in an Array
+const findMax = (arr) => Math.max(...arr);
+const arrMax = [10, 5, 20, 8, 25, 15];
+console.log("Maximum number:", findMax(arrMax));
