@@ -597,3 +597,8 @@ console.log("Maximum number:", findMax(arrMax));
 const findSum = (arr) => arr.reduce((sum, num) => sum + num, 0);
 const arrSum = [5, 10, 15, 20];
 console.log("Sum of array:", findSum(arrSum));
+
+// Sum of All Numbers in an Array
+const findMaxs = (arr)=> Math.max(...arr);
+const arrayMax=[10, 90, 89, 100];
+console.log(findMax(arrayMax));
