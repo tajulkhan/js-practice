@@ -705,17 +705,13 @@ console.log(arrslice.slice().reverse());
 // Using Map for Frequency Count
 const firstUnique = (arr) => {
   const count = new Map();
-  
   for (let num of arr) {
     count.set(num, (count.get(num) || 0) + 1);
   }
-
   for (let num of arr) {
     if (count.get(num) === 1) return num;
   }
-
   return -1; 
 };
-
 const arrfirstUnique = [4, 5, 1, 2, 0, 4, 1, 2];
 console.log("First unique number:", firstUnique(arrfirstUnique));
