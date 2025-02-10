@@ -715,3 +715,8 @@ const firstUnique = (arr) => {
 };
 const arrfirstUnique = [4, 5, 1, 2, 0, 4, 1, 2];
 console.log("First unique number:", firstUnique(arrfirstUnique));
+// Using a filter() 
+const firstUniqueFilter = (arr) => arr.find(num => arr.indexOf(num) === arr.lastIndexOf(num)) || -1;
+
+const arrFilter = [4, 5, 1, 2, 0, 4, 1, 2];
+console.log("First unique number:", firstUniqueFilter(arrFilter));
