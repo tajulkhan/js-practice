@@ -696,7 +696,26 @@ const reverseArray = (arr) => {
 const arrRvrs = [1, 2, 3, 4, 5];
 console.log("Reversed array:", reverseArray(arrRvrs));
 
-// 🔹 slice() ensures the original array is not modified.
-// 🔹 reverse() quickly reverses the array.
+// slice() ensures the original array is not modified.
+// reverse() quickly reverses the array.
 const arrslice = [1, 2, 3, 4, 5];
 console.log(arrslice.slice().reverse());
+
+// Find the First Non-Repeating Element in an Array
+// Using Map for Frequency Count
+const firstUnique = (arr) => {
+  const count = new Map();
+  
+  for (let num of arr) {
+    count.set(num, (count.get(num) || 0) + 1);
+  }
+
+  for (let num of arr) {
+    if (count.get(num) === 1) return num;
+  }
+
+  return -1; 
+};
+
+const arrfirstUnique = [4, 5, 1, 2, 0, 4, 1, 2];
+console.log("First unique number:", firstUnique(arrfirstUnique));
