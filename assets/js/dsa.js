@@ -720,3 +720,13 @@ const firstUniqueFilter = (arr) => arr.find(num => arr.indexOf(num) === arr.last
 
 const arrFilter = [4, 5, 1, 2, 0, 4, 1, 2];
 console.log("First unique number:", firstUniqueFilter(arrFilter));
+
+// Find the Missing Number in an Array
+const findMissingNumber = (arr, n) => {
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((sum, num) => sum + num, 0);
+  return expectedSum - actualSum;
+};
+
+const arrFN = [1, 2, 4, 5, 6];
+console.log("Missing number:", findMissingNumber(arrFN, 6));
