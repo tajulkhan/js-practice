@@ -747,3 +747,33 @@ const majorityElement = (nums) => {
 };
 console.log(majorityElement([3, 3, 4, 2, 3, 3, 3])); // Output: 3
 console.log(majorityElement([2, 2, 1, 1, 1, 2, 2])); // Output: 2
+
+// Write a function createHelloWorld. It should return a new function that always returns "Hello World".
+function createHelloWorld(){
+  return function(){
+      return "Hello World"
+  }
+}
+
+// Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
+function createCounter(n) {
+  return function() {
+      return n++;
+  };
+}
+
+// In this task, we need to create a function that returns an object with two separate functions. Given that the purpose of our parent function "expect" is to help developers test their code, it's possible that we may need to add more functionality later to account for different scenarios. Having our test functions inside an object helps us to keep the code organised and makes it easier to extend and add new methods without cluttering the global scope.
+function expect(val) {
+	const originalValue = val
+	return {
+		toBe: function(newVal) {
+			if (newVal !== originalValue) {
+				throw new Error("Not Equal")
+			} else return true },
+		notToBe: function(newVal) {
+			if (newVal === originalValue) {
+				throw new Error("Equal")
+			} else return true 
+		}
+	}
+}
