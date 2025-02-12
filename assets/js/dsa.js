@@ -845,3 +845,7 @@ const removeDuplicates = (arr) => [...new Set(arr)];
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); 
 console.log(removeDuplicates(["apple", "banana", "apple", "orange", "banana"])); 
 
+// Using filter() and indexOf()
+const removeDuplicatesFilter = (arr) => arr.filter((item, index) => arr.indexOf(item) === index);
+console.log(removeDuplicatesFilter([1, 2, 2, 3, 4, 4, 5])); 
+console.log(removeDuplicatesFilter(["apple", "banana", "apple", "orange", "banana"])); 
