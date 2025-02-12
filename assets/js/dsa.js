@@ -821,3 +821,21 @@ function filter(arr, fn) {
   }
   return result; 
 }
+
+// Find the Longest Word in a Sentence
+// Using split() and Loop
+const longestWord = (sentence) => {
+  const words = sentence.split(" ");
+  let longest = "";
+
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+
+  return longest;
+};
+console.log(longestWord("The quick brown fox jumps over the lazy dog")); //"jumps"
+console.log(longestWord("JavaScript is awesome")); //"JavaScript"
+console.log(longestWord("I love coding challenges")); //"challenges"
