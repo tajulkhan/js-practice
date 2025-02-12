@@ -839,3 +839,9 @@ const longestWord = (sentence) => {
 console.log(longestWord("The quick brown fox jumps over the lazy dog")); //"jumps"
 console.log(longestWord("JavaScript is awesome")); //"JavaScript"
 console.log(longestWord("I love coding challenges")); //"challenges"
+
+// Remove Duplicates from an Array
+const removeDuplicates = (arr) => [...new Set(arr)];
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); 
+console.log(removeDuplicates(["apple", "banana", "apple", "orange", "banana"])); 
+
