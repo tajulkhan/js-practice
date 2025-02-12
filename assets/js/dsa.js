@@ -849,3 +849,14 @@ console.log(removeDuplicates(["apple", "banana", "apple", "orange", "banana"]));
 const removeDuplicatesFilter = (arr) => arr.filter((item, index) => arr.indexOf(item) === index);
 console.log(removeDuplicatesFilter([1, 2, 2, 3, 4, 4, 5])); 
 console.log(removeDuplicatesFilter(["apple", "banana", "apple", "orange", "banana"])); 
+
+// Find the Second Largest Number in an Array
+// Using Sorting (Easy Approach)
+const secondLargest = (arr) => {
+  const uniqueArr = [...new Set(arr)]; // Remove duplicates
+  uniqueArr.sort((a, b) => b - a); // Sort in descending order
+  return uniqueArr.length > 1 ? uniqueArr[1] : null;
+};
+console.log(secondLargest([10, 5, 8, 20, 15])); 
+console.log(secondLargest([1, 2, 3, 4, 5])); 
+console.log(secondLargest([7])); 
