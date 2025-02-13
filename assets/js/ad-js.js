@@ -316,3 +316,8 @@ console.log(isPalindrome("hello")); // Output: false
 console.log(isPalindrome("No 'x' in Nixon")); // Output: true
 console.log(isPalindrome("12321")); // Output: true
 console.log(isPalindrome("12345")); // Output: false
+     
+// Find the Longest Word in a Sentence
+const longestWord = (str) => str.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, "");
+
+console.log(longestWord("The quick brown fox jumps")); 
