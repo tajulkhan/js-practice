@@ -321,3 +321,13 @@ console.log(isPalindrome("12345")); // Output: false
 const longestWord = (str) => str.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, "");
 
 console.log(longestWord("The quick brown fox jumps")); 
+
+// Promises & Async/Await
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve("Data fetched successfully!");
+      }, 2000);
+  });
+};
+fetchData().then(data => console.log(data)); 
