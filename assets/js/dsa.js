@@ -860,3 +860,17 @@ const secondLargest = (arr) => {
 console.log(secondLargest([10, 5, 8, 20, 15])); 
 console.log(secondLargest([1, 2, 3, 4, 5])); 
 console.log(secondLargest([7])); 
+
+// Find Pair with Sum in an Array
+const findPairWithSum = (arr, target) => {
+  let seen = new Set();
+
+  for (let num of arr) {
+      let complement = target - num;
+      if (seen.has(complement)) return [complement, num];
+      seen.add(num);
+  }
+  return [];
+};
+
+console.log(findPairWithSum([1, 2, 3, 4, 5], 6)); 
