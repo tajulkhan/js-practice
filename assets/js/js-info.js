@@ -1,0 +1,1 @@
+// Javascript info practice code 
