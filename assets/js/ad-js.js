@@ -331,3 +331,35 @@ const fetchData = () => {
   });
 };
 fetchData().then(data => console.log(data)); 
+
+// Working with Set Inside an Object
+const myObject = {
+  numbers: new Set([1, 2, 3, 4, 5]),
+
+  addNumber(num) {
+      this.numbers.add(num);
+  },
+
+  removeNumber(num) {
+      this.numbers.delete(num);
+  },
+
+  hasNumber(num) {
+      return this.numbers.has(num);
+  },
+
+  getNumbers() {
+      return [...this.numbers]; // Convert Set to Array
+  }
+};
+
+// Usage
+myObject.addNumber(6);
+console.log(myObject.getNumbers()); // [1, 2, 3, 4, 5, 6]
+
+myObject.removeNumber(3);
+console.log(myObject.getNumbers()); // [1, 2, 4, 5, 6]
+
+console.log(myObject.hasNumber(4)); // true
+console.log(myObject.hasNumber(10)); // false
+
