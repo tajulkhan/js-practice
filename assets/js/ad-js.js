@@ -426,12 +426,10 @@ const loginTracker = {
   maxSize: 5,
 
   addLogin(username) {
-      this.logins.delete(username); // Remove if exists to maintain order
+      this.logins.delete(username); 
       this.logins.add(username);
-
-      // Keep only the last 5 logins
       if (this.logins.size > this.maxSize) {
-          this.logins.delete([...this.logins][0]); // Remove the oldest
+          this.logins.delete([...this.logins][0]); 
       }
   },
 
@@ -439,13 +437,10 @@ const loginTracker = {
       return [...this.logins];
   }
 };
-
-// Usage
 loginTracker.addLogin("Taj");
 loginTracker.addLogin("Taj");
 loginTracker.addLogin("Alice");
 loginTracker.addLogin("Bob");
 loginTracker.addLogin("Eve");
-loginTracker.addLogin("Charlie"); // Oldest one removed
-
-console.log(loginTracker.getLogins()); // ['John', 'Alice', 'Bob', 'Eve', 'Charlie']
+loginTracker.addLogin("Charlie"); 
+console.log(loginTracker.getLogins()); 
