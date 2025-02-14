@@ -444,3 +444,23 @@ loginTracker.addLogin("Bob");
 loginTracker.addLogin("Eve");
 loginTracker.addLogin("Charlie"); 
 console.log(loginTracker.getLogins()); 
+
+// Tracking API Requests with Cooldown Using Set
+const apiLimiter = {
+  activeRequests: new Set(),
+  requestAPI(userId) {
+      if (this.activeRequests.has(userId)) {
+          console.log(`User ${userId} must wait before making another request.`);
+          return;
+      }
+      console.log(`User ${userId} made an API request.`);
+      this.activeRequests.add(userId);
+      setTimeout(() => {
+          this.activeRequests.delete(userId);
+          console.log(`User ${userId} can make a new request.`);
+      }, 5000);
+  }
+};
+apiLimiter.requestAPI(101); 
+apiLimiter.requestAPI(101); 
+setTimeout(() => apiLimiter.requestAPI(101), 6000);
