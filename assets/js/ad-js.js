@@ -393,3 +393,30 @@ console.log(userDatabase.getUsers());
 userDatabase.removeUser("John");
 console.log(userDatabase.getUsers()); 
 
+// Storing Unique Product IDs in a Set
+const productManager = {
+  products: new Set(),
+
+  addProduct(id) {
+      this.products.add(id);
+  },
+
+  removeProduct(id) {
+      this.products.delete(id);
+  },
+
+  listProducts() {
+      return [...this.products];
+  }
+};
+
+// Usage
+productManager.addProduct(101);
+productManager.addProduct(102);
+productManager.addProduct(101); // Duplicate, won't be added
+
+console.log(productManager.listProducts()); // [101, 102]
+
+productManager.removeProduct(101);
+console.log(productManager.listProducts()); // [102]
+
