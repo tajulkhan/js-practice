@@ -420,3 +420,32 @@ console.log(productManager.listProducts()); // [101, 102]
 productManager.removeProduct(101);
 console.log(productManager.listProducts()); // [102]
 
+// Tracking User Login History Using Set
+const loginTracker = {
+  logins: new Set(),
+  maxSize: 5,
+
+  addLogin(username) {
+      this.logins.delete(username); // Remove if exists to maintain order
+      this.logins.add(username);
+
+      // Keep only the last 5 logins
+      if (this.logins.size > this.maxSize) {
+          this.logins.delete([...this.logins][0]); // Remove the oldest
+      }
+  },
+
+  getLogins() {
+      return [...this.logins];
+  }
+};
+
+// Usage
+loginTracker.addLogin("Taj");
+loginTracker.addLogin("Taj");
+loginTracker.addLogin("Alice");
+loginTracker.addLogin("Bob");
+loginTracker.addLogin("Eve");
+loginTracker.addLogin("Charlie"); // Oldest one removed
+
+console.log(loginTracker.getLogins()); // ['John', 'Alice', 'Bob', 'Eve', 'Charlie']
