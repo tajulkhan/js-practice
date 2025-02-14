@@ -464,3 +464,13 @@ const apiLimiter = {
 apiLimiter.requestAPI(101); 
 apiLimiter.requestAPI(101); 
 setTimeout(() => apiLimiter.requestAPI(101), 6000);
+
+// Finding Unique Words in a Sentence Using Set
+const wordAnalyzer = {
+  analyze(sentence) {
+      const words = sentence.toLowerCase().split(/\W+/);
+      return new Set(words);
+  }
+};
+console.log(wordAnalyzer.analyze("Taj is learning JavaScript and JavaScript is fun!"));
+
