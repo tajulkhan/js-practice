@@ -363,3 +363,33 @@ console.log(myObject.getNumbers()); // [1, 2, 4, 5, 6]
 console.log(myObject.hasNumber(4)); // true
 console.log(myObject.hasNumber(10)); // false
 
+// Using Set to Store Unique Usernames
+const userDatabase = {
+  users: new Set(),
+
+  addUser(username) {
+      if (!this.users.has(username)) {
+          this.users.add(username);
+          console.log(`${username} added.`);
+      } else {
+          console.log(`${username} already exists!`);
+      }
+  },
+
+  removeUser(username) {
+      this.users.delete(username);
+      console.log(`${username} removed.`);
+  },
+
+  getUsers() {
+      return [...this.users];
+  }
+};
+
+userDatabase.addUser("Taj");
+userDatabase.addUser("John");
+userDatabase.addUser("Taj"); 
+console.log(userDatabase.getUsers()); 
+userDatabase.removeUser("John");
+console.log(userDatabase.getUsers()); 
+
