@@ -474,3 +474,34 @@ const wordAnalyzer = {
 };
 console.log(wordAnalyzer.analyze("Taj is learning JavaScript and JavaScript is fun!"));
 
+// Advanced Unique Cart System Using Set
+const shoppingCart = {
+  cart: new Set(),
+
+  addProduct(product) {
+      if (!this.cart.has(product)) {
+          this.cart.add(product);
+          console.log(`${product} added to cart.`);
+      } else {
+          console.log(`${product} is already in the cart.`);
+      }
+  },
+
+  removeProduct(product) {
+      this.cart.delete(product);
+      console.log(`${product} removed from cart.`);
+  },
+
+  listProducts() {
+      return [...this.cart];
+  }
+};
+
+// Usage
+shoppingCart.addProduct("Laptop");
+shoppingCart.addProduct("Phone");
+shoppingCart.addProduct("Laptop"); // Already exists
+
+console.log(shoppingCart.listProducts()); // ['Laptop', 'Phone']
+shoppingCart.removeProduct("Phone");
+console.log(shoppingCart.listProducts()); // ['Laptop']
