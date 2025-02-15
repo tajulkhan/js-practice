@@ -505,3 +505,24 @@ shoppingCart.addProduct("Laptop"); // Already exists
 console.log(shoppingCart.listProducts()); // ['Laptop', 'Phone']
 shoppingCart.removeProduct("Phone");
 console.log(shoppingCart.listProducts()); // ['Laptop']
+
+// Detecting Duplicate Usernames in Real-Time
+const usernameValidator = {
+  registeredUsers: new Set(),
+
+  register(username) {
+      if (this.registeredUsers.has(username.toLowerCase())) {
+          console.log(`❌ Username "${username}" is already taken.`);
+      } else {
+          this.registeredUsers.add(username.toLowerCase());
+          console.log(`✅ Username "${username}" registered successfully.`);
+      }
+  }
+};
+
+// Usage
+usernameValidator.register("Taj");
+usernameValidator.register("John");
+usernameValidator.register("taj"); // Already taken (case insensitive)
+usernameValidator.register("Alice");
+console.log(usernameValidator.registeredUsers); 
