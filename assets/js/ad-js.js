@@ -529,6 +529,19 @@ console.log(usernameValidator.registeredUsers);
 
 // Removing Duplicate Items from a Shopping List
 const shoppingList = ["Milk", "Eggs", "Butter", "Milk", "Bread", "Eggs", "Juice"];
-
 const uniqueShoppingList = [...new Set(shoppingList)];
 console.log(uniqueShoppingList); 
+
+// Finding the First Repeating Character in a String
+const firstRepeatingChar = (str) => {
+  const seen = new Set();
+
+  for (let char of str) {
+      if (seen.has(char)) return char;
+      seen.add(char);
+  }
+  return null;
+};
+
+console.log(firstRepeatingChar("javascript")); // "a"
+console.log(firstRepeatingChar("abcdef")); // null
