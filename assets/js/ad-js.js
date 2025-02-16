@@ -562,3 +562,21 @@ spamFilter.postComment("Nice post!");
 spamFilter.postComment("Great work!");
 spamFilter.postComment("Nice post!"); // 🚫 Duplicate detected
 
+// Finding Unique Words in Multiple Articles
+const extractUniqueWords = (articles) => {
+  const words = new Set();
+
+  articles.forEach(article => {
+      article.toLowerCase().split(/\W+/).forEach(word => words.add(word));
+  });
+
+  return [...words].sort();
+};
+
+const articles = [
+  "JavaScript is awesome! Learning JS every day.",
+  "JS helps build web applications and interactive UI.",
+  "The JavaScript ecosystem is growing rapidly."
+];
+console.log(extractUniqueWords(articles));
+
