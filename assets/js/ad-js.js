@@ -535,13 +535,30 @@ console.log(uniqueShoppingList);
 // Finding the First Repeating Character in a String
 const firstRepeatingChar = (str) => {
   const seen = new Set();
-
   for (let char of str) {
       if (seen.has(char)) return char;
       seen.add(char);
   }
   return null;
 };
-
 console.log(firstRepeatingChar("javascript")); // "a"
 console.log(firstRepeatingChar("abcdef")); // null
+console.log(firstRepeatingChar("abccacdef")); // "c"
+
+// Detecting & Blocking Spam Comments
+const spamFilter = {
+  postedComments: new Set(),
+  postComment(comment) {
+      const normalizedComment = comment.toLowerCase().trim();
+      if (this.postedComments.has(normalizedComment)) {
+          console.log("🚫 Duplicate comment detected!");
+      } else {
+          this.postedComments.add(normalizedComment);
+          console.log("✅ Comment posted:", comment);
+      }
+  }
+};
+spamFilter.postComment("Nice post!");
+spamFilter.postComment("Great work!");
+spamFilter.postComment("Nice post!"); // 🚫 Duplicate detected
+
