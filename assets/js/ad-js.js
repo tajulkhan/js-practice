@@ -526,3 +526,9 @@ usernameValidator.register("John");
 usernameValidator.register("taj"); // Already taken (case insensitive)
 usernameValidator.register("Alice");
 console.log(usernameValidator.registeredUsers); 
+
+// Removing Duplicate Items from a Shopping List
+const shoppingList = ["Milk", "Eggs", "Butter", "Milk", "Bread", "Eggs", "Juice"];
+
+const uniqueShoppingList = [...new Set(shoppingList)];
+console.log(uniqueShoppingList); 
