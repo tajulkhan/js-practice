@@ -594,3 +594,12 @@ const people = [
 
 people.sort((a, b) => a.age - b.age);
 console.log(people);
+
+// Filtering Data Using filter()
+const users = [
+  { name: "Taj", active: true },
+  { name: "John", active: false },
+  { name: "Alice", active: true }
+];
+const activeUsers = users.filter(user => user.active);
+console.log(activeUsers); 
