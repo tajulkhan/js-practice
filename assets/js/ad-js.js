@@ -603,3 +603,8 @@ const users = [
 ];
 const activeUsers = users.filter(user => user.active);
 console.log(activeUsers); 
+
+// Transforming Data Using map()
+const numbersMap = [1, 2, 3, 4, 5];
+const squaredNumbers = numbersMap.map(num => num * num);
+console.log(squaredNumbers);
