@@ -580,3 +580,8 @@ const articles = [
 ];
 console.log(extractUniqueWords(articles));
 
+// Removing Duplicates Using Set
+const numbersSet = [1, 2, 3, 4, 3, 2, 1, 5, 6, 7, 5];
+
+const uniqueNumbers = [...new Set(numbersSet)];
+console.log(uniqueNumbers); // [1, 2, 3, 4, 5, 6, 7]
