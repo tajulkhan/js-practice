@@ -584,3 +584,13 @@ console.log(extractUniqueWords(articles));
 const numbersSet = [1, 2, 3, 4, 3, 2, 1, 5, 6, 7, 5];
 const uniqueNumbers = [...new Set(numbersSet)];
 console.log(uniqueNumbers); 
+
+// Sorting Objects by Property Using sort()
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 20 },
+  { name: "Charlie", age: 30 }
+];
+
+people.sort((a, b) => a.age - b.age);
+console.log(people);
