@@ -608,3 +608,22 @@ console.log(activeUsers);
 const numbersMap = [1, 2, 3, 4, 5];
 const squaredNumbers = numbersMap.map(num => num * num);
 console.log(squaredNumbers);
+
+// Flattening an Array Using flat()
+const nestedArray = [1, [2, [3, 4], 5], 6];
+const flatArray = nestedArray.flat(2);
+console.log(flatArray); 
+
+// use of a constructor function
+function Person(name,age,gender){
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+
+
+var person1 = new Person("Vivek", 76, "male");
+console.log(person1);
+
+var person2 = new Person("Courtney", 34, "female");
+console.log(person2)
