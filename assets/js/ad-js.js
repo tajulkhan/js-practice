@@ -645,3 +645,12 @@ const sentences = ["I love JS", "Arrays are powerful"];
 
 const words = sentences.flatMap(sentence => sentence.split(" "));
 console.log(words); // ["I", "love", "JS", "Arrays", "are", "powerful"]
+
+const numbersR = [1, 2, 3, 4];
+
+const reversed = numbersR.reduceRight((acc, num) => {
+    acc.push(num);
+    return acc;
+}, []);
+
+console.log(reversed); // [4, 3, 2, 1]
