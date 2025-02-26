@@ -654,3 +654,9 @@ const reversed = numbersR.reduceRight((acc, num) => {
 }, []);
 
 console.log(reversed); // [4, 3, 2, 1]
+
+const array = ["a", "b", "c"];
+
+console.log(Object.keys(array)); // ["0", "1", "2"]
+console.log(Object.values(array)); // ["a", "b", "c"]
+console.log(Object.entries(array)); // [["0", "a"], ["1", "b"], ["2", "c"]]
