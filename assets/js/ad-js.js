@@ -640,4 +640,8 @@ function operationOnSum(num1,num2,operation){
 operationOnSum(3, 3, divideByHalf); 
 operationOnSum(5, 5, multiplyBy2); 
 
+// Array 
+const sentences = ["I love JS", "Arrays are powerful"];
 
+const words = sentences.flatMap(sentence => sentence.split(" "));
+console.log(words); // ["I", "love", "JS", "Arrays", "are", "powerful"]
