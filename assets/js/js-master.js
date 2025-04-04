@@ -30,3 +30,12 @@ const p1 = new Persons("Taj");
 const p2 = new Persons("khan");
 console.log(p1.greets());
 console.log(p2.greets());
+
+// Promise Chains & async/await
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data fetched!");
+    }, 1000);
+  });
+};
