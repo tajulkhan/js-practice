@@ -85,3 +85,17 @@ const numbers = [1, 2, 3, 4];
 
 const sum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum); // 10
+
+// Real-world example:
+
+const users = [
+  { name: "Taj", age: 25 },
+  { name: "Ali", age: 17 },
+  { name: "Sara", age: 30 },
+];
+
+const adults = users
+  .filter((user) => user.age >= 18)
+  .map((user) => user.name);
+
+console.log(adults); // ["Taj", "Sara"]
