@@ -50,3 +50,16 @@ fetchData()
     return "Step 3";
   })
   .catch((err) => console.error(err));
+
+// ⏳ async/await (cleaner syntax for Promises)
+  const getData = async () => {
+  try {
+    const result = await fetchData();
+    console.log(result); // "Data fetched!"
+    console.log("Next Step");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+getData();
