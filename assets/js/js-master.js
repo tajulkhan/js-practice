@@ -9,10 +9,8 @@ function createCounter() {
     getCount: () => count
   };
 }
-
 // Create a new counter instance
 const counter = createCounter();
-
 // Use the methods and log their output
 console.log("Initial count:", counter.getCount());  // 0
 console.log("Incrementing count:", counter.increment());  // 1
