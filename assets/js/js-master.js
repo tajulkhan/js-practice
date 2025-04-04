@@ -99,3 +99,14 @@ const adults = users
   .map((user) => user.name);
 
 console.log(adults); // ["Taj", "Sara"]
+
+// Optional Chaining
+const user = {
+  name: "Taj",
+  address: {
+    city: "Lahore"
+  }
+};
+
+console.log(user.address?.city); // "Lahore"
+console.log(user.profile?.bio);  // undefined (no error!)
