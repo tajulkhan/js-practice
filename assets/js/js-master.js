@@ -39,3 +39,14 @@ const fetchData = () => {
     }, 1000);
   });
 };
+// 🔁 Promise Chains
+fetchData()
+  .then((res) => {
+    console.log(res); // "Data fetched!"
+    return "Step 2";
+  })
+  .then((res) => {
+    console.log(res); // "Step 2"
+    return "Step 3";
+  })
+  .catch((err) => console.error(err));
