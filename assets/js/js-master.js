@@ -110,3 +110,29 @@ const user = {
 
 console.log(user.address?.city); // "Lahore"
 console.log(user.profile?.bio);  // undefined (no error!)
+
+// l Integration Example (Real-world Scenario)
+const response = {
+  success: true,
+  users: [
+    { id: 1, name: "Taj", email: "taj@email.com", active: true },
+    { id: 2, name: "Ali", email: "ali@email.com", active: false },
+    { id: 3, name: "Sara", email: null, active: true },
+  ],
+};
+
+// Processing the data
+const result = response.users
+  ?.filter(user => user.active)
+  .map(({ name, email }) => ({
+    name,
+    email: email ?? "No Email Provided"
+  }));
+
+console.log(result);
+/*
+[
+  { name: "Taj", email: "taj@email.com" },
+  { name: "Sara", email: "No Email Provided" }
+]
+*/
