@@ -200,3 +200,20 @@ fetchAllUsers();
   { id: 3, name: "User 3" }
 ]
 */
+// debounce and throttle
+function debounce(fn, delay) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
+  };
+}
+
+const search = debounce((query) => {
+  console.log("Searching for", query);
+}, 500);
+
+search("T");
+search("Ta");
+search("Taj"); // Only logs "Searching for Taj"
+
