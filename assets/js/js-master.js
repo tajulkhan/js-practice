@@ -136,3 +136,28 @@ console.log(result);
   { name: "Sara", email: "No Email Provided" }
 ]
 */
+// Mini Project: Order Summary Processor
+
+const orders = [
+  {
+    id: 1,
+    user: { name: "Taj", email: "taj@email.com" },
+    status: "completed",
+    items: [
+      { name: "Book", price: 10 },
+      { name: "Pen", price: 2 }
+    ]
+  },
+  {
+    id: 2,
+    user: { name: "Ali", email: "ali@email.com" },
+    status: "pending",
+    items: [{ name: "Laptop", price: 1000 }]
+  },
+  {
+    id: 3,
+    user: { name: "Taj", email: "taj@email.com" },
+    status: "completed",
+    items: [{ name: "Notebook", price: 5 }]
+  }
+];
