@@ -161,3 +161,17 @@ const orders = [
     items: [{ name: "Notebook", price: 5 }]
   }
 ];
+
+const completedOrders = orders
+  .filter(order => order.status === "completed");
+
+const userTotals = completedOrders.reduce((acc, order) => {
+  const { user: { name }, items } = order;
+  const total = items?.reduce((sum, item) => sum + item.price, 0) ?? 0;
+
+  acc[name] = (acc[name] || 0) + total;
+  return acc;
+}, {});
+
+console.log(userTotals);
+// { Taj: 17 }
