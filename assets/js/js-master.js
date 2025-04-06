@@ -175,3 +175,28 @@ const userTotals = completedOrders.reduce((acc, order) => {
 
 console.log(userTotals);
 // { Taj: 17 }
+
+const fetchUser = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve({ id, name: `User ${id}` }), 1000);
+  });
+};
+
+const fetchAllUsers = async () => {
+  const users = await Promise.all([
+    fetchUser(1),
+    fetchUser(2),
+    fetchUser(3),
+  ]);
+
+  console.log(users);
+};
+
+fetchAllUsers();
+/*
+[
+  { id: 1, name: "User 1" },
+  { id: 2, name: "User 2" },
+  { id: 3, name: "User 3" }
+]
+*/
