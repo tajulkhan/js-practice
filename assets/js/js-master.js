@@ -276,3 +276,18 @@ creditCard.process(500); // Paid ₹500 using Credit Card
 
 const paypal = new PaymentProcessor(new PayPalPayment());
 paypal.process(800); // Paid ₹800 using PayPal
+
+// Rewrite 'if..else' into '?'
+
+let message;
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
+} else {
+  message = '';
+}
+console.log(message);
+
