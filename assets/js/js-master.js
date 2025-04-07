@@ -232,4 +232,18 @@ function throttle(fn, limit) {
 const onScroll = throttle(() => {
   console.log("Scroll event fired");
 }, 1000);
+// Factory Pattern
+function UserFactory(role) {
+  if (role === "admin") {
+    return { role, permissions: ["read", "write", "delete"] };
+  } else if (role === "guest") {
+    return { role, permissions: ["read"] };
+  } else {
+    return { role, permissions: [] };
+  }
+}
 
+const admin = UserFactory("admin");
+const guest = UserFactory("guest");
+
+console.log(admin); // { role: "admin", permissions: [...] }
