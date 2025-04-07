@@ -247,3 +247,32 @@ const admin = UserFactory("admin");
 const guest = UserFactory("guest");
 
 console.log(admin); // { role: "admin", permissions: [...] }
+// Strategy Pattern
+class CreditCardPayment {
+  pay(amount) {
+    console.log(`Paid ₹${amount} using Credit Card`);
+  }
+}
+
+class PayPalPayment {
+  pay(amount) {
+    console.log(`Paid ₹${amount} using PayPal`);
+  }
+}
+
+class PaymentProcessor {
+  constructor(strategy) {
+    this.strategy = strategy;
+  }
+
+  process(amount) {
+    this.strategy.pay(amount);
+  }
+}
+
+// Usage
+const creditCard = new PaymentProcessor(new CreditCardPayment());
+creditCard.process(500); // Paid ₹500 using Credit Card
+
+const paypal = new PaymentProcessor(new PayPalPayment());
+paypal.process(800); // Paid ₹800 using PayPal
