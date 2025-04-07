@@ -217,3 +217,19 @@ search("T");
 search("Ta");
 search("Taj"); // Only logs "Searching for Taj"
 
+// Throttle (limit how often a function runs)
+function throttle(fn, limit) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastCall >= limit) {
+      lastCall = now;
+      fn(...args);
+    }
+  };
+}
+
+const onScroll = throttle(() => {
+  console.log("Scroll event fired");
+}, 1000);
+
