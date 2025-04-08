@@ -333,3 +333,14 @@ let bag = {
 };
 
 alert( bag.apple ); // 5 if fruit="apple"
+
+// Property value shorthand
+function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+  };
+}
+
+let user = makeUser("John", 30);
+alert(user.name); 
