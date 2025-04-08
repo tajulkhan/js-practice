@@ -361,3 +361,7 @@ let obj = {
 
 alert( obj["0"] ); // test
 alert( obj[0] ); // test (same property)
+
+// Property existence test, “in” operator
+let user = {};
+alert( user.noSuchProperty === undefined ); // true means "no such property"
