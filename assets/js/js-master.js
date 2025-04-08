@@ -344,3 +344,11 @@ function makeUser(name, age) {
 
 let user = makeUser("John", 30);
 alert(user.name); 
+// Property names limitations
+let obj = {
+  for: 1,
+  let: 2,
+  return: 3
+};
+
+alert( obj.for + obj.let + obj.return ); 
