@@ -373,3 +373,9 @@ alert( "blabla" in user ); // false, user.blabla doesn't exist
 let user = { age: 30 };
 let key = "age";
 alert( key in user ); // true, property "age" exists
+
+let obj = {
+  test: undefined
+};
+alert( obj.test ); // it's undefined, so - no such property?
+alert( "test" in obj ); // true, the property does exist!
