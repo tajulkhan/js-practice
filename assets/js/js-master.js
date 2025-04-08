@@ -307,4 +307,12 @@ ask(
   function() { alert("You agreed."); },
   function() { alert("You canceled the execution."); }
 );
+// object concept
+let user = {     
+  name: "John",  
+  age: 30       
+};
+user.isAdmin = true;
+delete user.age;
+console.log(user);
 
