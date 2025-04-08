@@ -369,3 +369,7 @@ alert( user.noSuchProperty === undefined ); // true means "no such property"
 let user = { name: "John", age: 30 };
 alert( "age" in user ); // true, user.age exists
 alert( "blabla" in user ); // false, user.blabla doesn't exist
+
+let user = { age: 30 };
+let key = "age";
+alert( key in user ); // true, property "age" exists
