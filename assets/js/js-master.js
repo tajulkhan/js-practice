@@ -325,4 +325,11 @@ let key = prompt("What do you want to know about the user?", "name");
 
 // access by variable
 alert( user[key] ); 
+// Computed properties
+let fruit = prompt("Which fruit to buy?", "apple");
 
+let bag = {
+  [fruit]: 5, // the name of the property is taken from the variable fruit
+};
+
+alert( bag.apple ); // 5 if fruit="apple"
