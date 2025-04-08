@@ -379,3 +379,21 @@ let obj = {
 };
 alert( obj.test ); // it's undefined, so - no such property?
 alert( "test" in obj ); // true, the property does exist!
+
+// The "for..in" loop
+for (key in object) {
+  // executes the body for each key among object properties
+}
+
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+for (let key in user) {
+  // keys
+  console.log(key)
+  // values for the keys
+  console.log(user[key]);
+}
