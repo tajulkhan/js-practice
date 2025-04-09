@@ -431,3 +431,15 @@ let user = {
 };
 
 alert( user.sizes.height );
+//------------------------------------------
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+let clone = Object.assign({}, user);
+alert( user.sizes === clone.sizes ); 
+user.sizes.width = 60;    
+alert(clone.sizes.width); 
