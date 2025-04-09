@@ -420,3 +420,14 @@ for (let key in user) {
 clone.name = "Pete"; 
 // alert( user.name ); 
 console.log(clone.name)
+
+// Nested cloning
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+
+alert( user.sizes.height );
