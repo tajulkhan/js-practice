@@ -408,3 +408,15 @@ for (let code in codes) {
     console.log(code);
 }
 
+// Cloning and merging, Object.assign
+let user = {
+  name: "John",
+  age: 30
+};
+let clone = {};
+for (let key in user) {
+  clone[key] = user[key];
+}
+clone.name = "Pete"; 
+// alert( user.name ); 
+console.log(clone.name)
