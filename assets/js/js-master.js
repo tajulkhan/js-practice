@@ -499,3 +499,12 @@ function makeUser() {
 let user = makeUser();
 
 alert( user.ref().name ); // John
+
+//Constructor function
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
+let user = new User("Jack");
+alert(user.name); // Jack
+alert(user.isAdmin); // false
