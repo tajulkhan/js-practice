@@ -546,3 +546,9 @@ function User(name) {
 let john = new User("John");
 
 john.sayHi(); // My name is: John
+
+// Optional chaining '?.'
+
+let user = {}; // user has no address
+alert( user.address && user.address.street && user.address.street.name ); // undefined (no error)
+
