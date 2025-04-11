@@ -561,3 +561,14 @@ let userAdmin = {
 let userGuest = {};
 userAdmin.admin?.(); // I am admin
 userGuest.admin?.(); // nothing happens (no such method)
+
+// Symbol type
+let user = { // belongs to another code
+  name: "John"
+};
+
+let id = Symbol("id");
+
+user[id] = 1;
+
+alert( user[id] ); // we can access the data using the symbol as the key
