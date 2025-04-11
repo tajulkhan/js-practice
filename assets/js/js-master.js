@@ -525,3 +525,12 @@ function BigUser() {
   return { name: "Godzilla" };  // <-- returns this object
 }
 alert( new BigUser().name );  // Godzilla, got that object
+
+function SmallUser() {
+
+  this.name = "John";
+
+  return; // <-- returns this
+}
+
+alert( new SmallUser().name );  // John
