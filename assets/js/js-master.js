@@ -572,3 +572,19 @@ let id = Symbol("id");
 user[id] = 1;
 
 alert( user[id] ); // we can access the data using the symbol as the key
+
+// Object to primitive conversion
+let user = {
+  name: "John",
+  money: 1000,
+
+  [Symbol.toPrimitive](hint) {
+    alert(`hint: ${hint}`);
+    return hint == "string" ? `{name: "${this.name}"}` : this.money;
+  }
+};
+
+// conversions demo:
+alert(user); // hint: string -> {name: "John"}
+alert(+user); // hint: number -> 1000
+alert(user + 500); // hint: default -> 1500
