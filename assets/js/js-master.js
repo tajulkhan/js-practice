@@ -605,3 +605,15 @@ let user = {
 alert(user); // toString -> {name: "John"}
 alert(+user); // valueOf -> 1000
 alert(user + 500); // valueOf -> 1500
+
+// toString -> John500
+let user = {
+  name: "John",
+
+  toString() {
+    return this.name;
+  }
+};
+
+alert(user); // toString -> John
+alert(user + 500); // toString -> John500
