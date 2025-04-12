@@ -878,3 +878,22 @@ let set = new Set([1, 2, 2, 3]); // {1, 2, 3}
 let map = new Map();
 map.set("name", "Taj");
 
+function firstNonRepeatingChar(str) {
+  let charCount = {};
+
+  // Count frequency of each character
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Find the first character with count 1
+  for (let char of str) {
+    if (charCount[char] === 1) {
+      return char;
+    }
+  }
+
+  return null; // if no non-repeating char found
+}
+
+console.log(firstNonRepeatingChar("javascript")); // Output: "j"
