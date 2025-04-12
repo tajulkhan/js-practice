@@ -627,3 +627,12 @@ let obj = {
 };
 
 alert(obj * 2); // 4, object converted to primitive "2", then multiplication made it a number
+
+ // "22" ("2" + 2), conversion to primitive returned a string => concatenation
+let obj = {
+  toString() {
+    return "2";
+  }
+};
+
+alert(obj + 2); // "22" ("2" + 2), conversion to primitive returned a string => concatenation
