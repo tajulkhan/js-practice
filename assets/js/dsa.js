@@ -874,3 +874,7 @@ const findPairWithSum = (arr, target) => {
 };
 
 console.log(findPairWithSum([1, 2, 3, 4, 5], 6)); 
+let set = new Set([1, 2, 2, 3]); // {1, 2, 3}
+let map = new Map();
+map.set("name", "Taj");
+
