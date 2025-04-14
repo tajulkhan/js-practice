@@ -930,3 +930,18 @@ function twoSum(nums, target) {
 
 console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
 
+// Valid Palindrome (Two Pointers)
+function isPalindrome(s) {
+  s = s.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  let left = 0, right = s.length - 1;
+  
+  while (left < right) {
+    if (s[left] !== s[right]) return false;
+    left++;
+    right--;
+  }
+
+  return true;
+}
+
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true
