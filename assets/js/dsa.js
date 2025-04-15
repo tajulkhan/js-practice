@@ -969,3 +969,20 @@ function moveZeroes(arr) {
   return arr;
 }
 console.log(moveZeroes([0, 1, 0, 3, 12])); // [1, 3, 12, 0, 0]
+
+// Group Anagrams
+function groupAnagrams(strs) {
+  let map = {};
+
+  for (let word of strs) {
+    let sorted = word.split('').sort().join('');
+    if (!map[sorted]) {
+      map[sorted] = [];
+    }
+    map[sorted].push(word);
+  }
+
+  return Object.values(map);
+}
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
