@@ -957,3 +957,15 @@ function fib(n, memo = {}) {
 
 console.log(fib(6)); // Output: 8
 
+ // Move All Zeros to End (In-Place)
+function moveZeroes(arr) {
+  let nonZeroIndex = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      [arr[nonZeroIndex], arr[i]] = [arr[i], arr[nonZeroIndex]];
+      nonZeroIndex++;
+    }
+  }
+  return arr;
+}
+console.log(moveZeroes([0, 1, 0, 3, 12])); // [1, 3, 12, 0, 0]
