@@ -1072,3 +1072,23 @@ function maxSubArray(nums) {
   return maxSum;
 }
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])); // 6
+
+//Character Frequency Counter (Most Frequent Char)
+function mostFrequentChar(str) {
+  let freq = {};
+  let maxChar = '';
+  let maxCount = 0;
+
+  for (let char of str) {
+    freq[char] = (freq[char] || 0) + 1;
+    if (freq[char] > maxCount) {
+      maxCount = freq[char];
+      maxChar = char;
+    }
+  }
+
+  return maxChar;
+}
+
+console.log(mostFrequentChar("javascript")); // 'a' or 'j'
+
