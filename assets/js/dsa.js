@@ -1092,3 +1092,13 @@ function mostFrequentChar(str) {
 
 console.log(mostFrequentChar("javascript")); // 'a' or 'j'
 
+// Find Missing Number from 0 to N – O(n)
+function missingNumber(nums) {
+  let n = nums.length;
+  let expectedSum = (n * (n + 1)) / 2;
+  let actualSum = nums.reduce((a, b) => a + b, 0);
+  return expectedSum - actualSum;
+}
+
+console.log(missingNumber([3, 0, 1])); // 2
+
