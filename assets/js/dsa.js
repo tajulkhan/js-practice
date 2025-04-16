@@ -1038,3 +1038,26 @@ let len = removeDuplicates(arr);
 console.log(len);           // 2
 console.log(arr.slice(0, len)); // [1, 2]
 
+// Check If Two Strings Are Isomorphic
+function isIsomorphic(s, t) {
+  if (s.length !== t.length) return false;
+
+  let mapS = {}, mapT = {};
+
+  for (let i = 0; i < s.length; i++) {
+    let a = s[i], b = t[i];
+
+    if ((mapS[a] && mapS[a] !== b) || (mapT[b] && mapT[b] !== a)) {
+      return false;
+    }
+
+    mapS[a] = b;
+    mapT[b] = a;
+  }
+
+  return true;
+}
+
+console.log(isIsomorphic("egg", "add")); // true
+console.log(isIsomorphic("foo", "bar")); // false
+
