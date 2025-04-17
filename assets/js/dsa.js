@@ -1138,3 +1138,25 @@ function firstUniqChar(s) {
 }
 
 console.log(firstUniqChar("leetcode")); // 0
+
+// Group Words by Frequency of Characters
+function groupByCharFrequency(words) {
+  const map = {};
+
+  for (let word of words) {
+    const freq = Array(26).fill(0);
+
+    for (let char of word) {
+      freq[char.charCodeAt(0) - 97]++;
+    }
+
+    const key = freq.join("#"); // unique signature
+    if (!map[key]) map[key] = [];
+    map[key].push(word);
+  }
+
+  return Object.values(map);
+}
+
+console.log(groupByCharFrequency(["abc", "bca", "cab", "aabb", "baba", "aaabb"]));
+
