@@ -1173,9 +1173,6 @@ function compressString(str) {
       count = 1;
     }
   }
-
   return result;
 }
-
 console.log(compressString("aaabbcddd")); // "a3b2c1d3"
-
