@@ -1176,3 +1176,15 @@ function compressString(str) {
   return result;
 }
 console.log(compressString("aaabbcddd")); // "a3b2c1d3"
+
+// Flatten a Nested Object
+{
+  name: "Taj",
+  address: {
+    city: "Chennai",
+    location: {
+      lat: 12.9,
+      lng: 80.2
+    }
+  }
+}
