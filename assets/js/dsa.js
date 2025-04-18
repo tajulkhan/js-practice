@@ -1224,3 +1224,19 @@ const input = {
 
 console.log(flattenObject(input));
 
+// Reorganize String by Character Frequency
+function frequencySort(s) {
+  const freq = {};
+
+  for (let char of s) {
+    freq[char] = (freq[char] || 0) + 1;
+  }
+
+  return Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .map(([char, count]) => char.repeat(count))
+    .join("");
+}
+
+console.log(frequencySort("tree")); // "eetr"
+
