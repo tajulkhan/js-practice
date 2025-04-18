@@ -1195,3 +1195,32 @@ console.log(compressString("aaabbcddd")); // "a3b2c1d3"
   "address.location.lat": 12.9,
   "address.location.lng": 80.2
 }
+
+
+function flattenObject(obj, prefix = "", result = {}) {
+  for (let key in obj) {
+    let newKey = prefix ? `${prefix}.${key}` : key;
+
+    if (typeof obj[key] === "object" && obj[key] !== null && !Array.isArray(obj[key])) {
+      flattenObject(obj[key], newKey, result);
+    } else {
+      result[newKey] = obj[key];
+    }
+  }
+
+  return result;
+}
+
+const input = {
+  name: "Taj",
+  address: {
+    city: "Chennai",
+    location: {
+      lat: 12.9,
+      lng: 80.2
+    }
+  }
+};
+
+console.log(flattenObject(input));
+
