@@ -1188,3 +1188,10 @@ console.log(compressString("aaabbcddd")); // "a3b2c1d3"
     }
   }
 }
+// output
+{
+  "name": "Taj",
+  "address.city": "Chennai",
+  "address.location.lat": 12.9,
+  "address.location.lng": 80.2
+}
