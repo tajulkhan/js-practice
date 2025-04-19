@@ -26,4 +26,23 @@ John,32,Bangalore
   { name: "John", age: "32", city: "Bangalore" }
 ]
 
+function csvToJson(csv) {
+  const lines = csv.trim().split("\n");
+  const headers = lines[0].split(",");
+
+  return lines.slice(1).map(line => {
+    const values = line.split(",");
+    const obj = {};
+    headers.forEach((header, i) => {
+      obj[header.trim()] = values[i].trim();
+    });
+    return obj;
+  });
+}
+
+const inputCSV = `name,age,city
+Taj,28,Chennai
+John,32,Bangalore`;
+
+console.log(csvToJson(inputCSV));
 
