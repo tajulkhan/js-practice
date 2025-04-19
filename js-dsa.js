@@ -14,3 +14,16 @@ function parseQuery(queryString) {
 }
 
 console.log(parseQuery("?name=Taj&role=dev&city=Chennai"));
+
+//Convert CSV to JSON
+//input 
+name,age,city
+Taj,28,Chennai
+John,32,Bangalore
+//output
+[
+  { name: "Taj", age: "28", city: "Chennai" },
+  { name: "John", age: "32", city: "Bangalore" }
+]
+
+
