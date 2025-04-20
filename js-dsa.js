@@ -46,3 +46,38 @@ John,32,Bangalore`;
 
 console.log(csvToJson(inputCSV));
 
+//Deep Merge of Two JSON Objects
+function deepMerge(target, source) {
+  for (let key in source) {
+    if (
+      typeof source[key] === "object" &&
+      source[key] !== null &&
+      !Array.isArray(source[key])
+    ) {
+      if (!target[key]) target[key] = {};
+      deepMerge(target[key], source[key]);
+    } else {
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+
+const obj1 = {
+  user: { name: "Taj", age: 28 },
+  settings: { darkMode: true }
+};
+
+const obj2 = {
+  user: { age: 29 },
+  settings: { notifications: true }
+};
+
+console.log(deepMerge({ ...obj1 }, obj2));
+
+/*
+{
+  user: { name: 'Taj', age: 29 },
+  settings: { darkMode: true, notifications: true }
+}
+*/
