@@ -165,3 +165,12 @@ function isStrongPassword(pw) {
 console.log(isStrongPassword("Taj@1234"));  // true
 console.log(isStrongPassword("taj123"));    // false
 
+//Validate All Together
+
+function validateForm({ email, phone, password }) {
+  return {
+    email: isValidEmail(email),
+    phone: isValidPhone(phone),
+    password: isStrongPassword(password)
+  };
+}
