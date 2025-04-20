@@ -145,4 +145,14 @@ function isValidEmail(email) {
 console.log(isValidEmail("taj@example.com")); // true
 console.log(isValidEmail("taj@.com")); // false
 
+//Phone Number Validator (Indian Format Example)
+
+function isValidPhone(phone) {
+  const cleaned = phone.replace(/\D/g, ""); // strip non-digits
+  return /^(\+91|91)?[6-9]\d{9}$/.test(cleaned);
+}
+
+console.log(isValidPhone("9876543210"));     // true
+console.log(isValidPhone("+919876543210"));  // true
+console.log(isValidPhone("12345"));          // false
 
