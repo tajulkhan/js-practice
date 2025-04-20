@@ -81,3 +81,58 @@ console.log(deepMerge({ ...obj1 }, obj2));
   settings: { darkMode: true, notifications: true }
 }
 */
+
+//Deep Diff Between Two JSON Objects
+
+function deepDiff(obj1, obj2) {
+  let diff = {};
+
+  for (let key in obj1) {
+    if (!(key in obj2)) {
+      diff[key] = { removed: obj1[key] };
+    } else if (
+      typeof obj1[key] === "object" &&
+      typeof obj2[key] === "object" &&
+      obj1[key] !== null &&
+      obj2[key] !== null
+    ) {
+      const nested = deepDiff(obj1[key], obj2[key]);
+      if (Object.keys(nested).length) diff[key] = nested;
+    } else if (obj1[key] !== obj2[key]) {
+      diff[key] = { from: obj1[key], to: obj2[key] };
+    }
+  }
+
+  for (let key in obj2) {
+    if (!(key in obj1)) {
+      diff[key] = { added: obj2[key] };
+    }
+  }
+
+  return diff;
+}
+
+const before = {
+  name: "Taj",
+  age: 28,
+  address: { city: "Chennai", pin: 600001 }
+};
+
+const after = {
+  name: "Taj",
+  age: 29,
+  address: { city: "Chennai", pin: 600002, area: "Anna Nagar" }
+};
+
+console.log(deepDiff(before, after));
+
+/*
+{
+  age: { from: 28, to: 29 },
+  address: {
+    pin: { from: 600001, to: 600002 },
+    area: { added: 'Anna Nagar' }
+  }
+}
+*/
+
