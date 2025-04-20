@@ -136,3 +136,13 @@ console.log(deepDiff(before, after));
 }
 */
 
+//Email Validator (Regex + Realistic Check)
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  return regex.test(email);
+}
+
+console.log(isValidEmail("taj@example.com")); // true
+console.log(isValidEmail("taj@.com")); // false
+
+
