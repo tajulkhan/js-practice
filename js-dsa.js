@@ -156,3 +156,12 @@ console.log(isValidPhone("9876543210"));     // true
 console.log(isValidPhone("+919876543210"));  // true
 console.log(isValidPhone("12345"));          // false
 
+//Password Strength Validator
+function isStrongPassword(pw) {
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  return regex.test(pw);
+}
+
+console.log(isStrongPassword("Taj@1234"));  // true
+console.log(isStrongPassword("taj123"));    // false
+
