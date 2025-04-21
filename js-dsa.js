@@ -191,3 +191,12 @@ function isValidAadhaar(aadhaar) {
 console.log(isValidAadhaar("234567890123")); // true
 console.log(isValidAadhaar("012345678901")); // false
 
+// Indian Date Format Validator (DD-MM-YYYY)
+function isValidDate(dateStr) {
+  const regex = /^(0[1-9]|[12][0-9]|3[01])[-/](0[1-9]|1[0-2])[-/](19|20)\d\d$/;
+  return regex.test(dateStr);
+}
+
+console.log(isValidDate("19-04-2025")); // true
+console.log(isValidDate("32-13-2025")); // false
+
