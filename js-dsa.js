@@ -200,3 +200,12 @@ function isValidDate(dateStr) {
 console.log(isValidDate("19-04-2025")); // true
 console.log(isValidDate("32-13-2025")); // false
 
+//GSTIN Validator (Indian GST Number)
+function isValidGSTIN(gstin) {
+  return /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/.test(gstin);
+}
+
+console.log(isValidGSTIN("29ABCDE1234F1Z5")); // true
+console.log(isValidGSTIN("ABCDE1234F1Z5"));   // false
+
+
