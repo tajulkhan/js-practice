@@ -174,3 +174,11 @@ function validateForm({ email, phone, password }) {
     password: isStrongPassword(password)
   };
 }
+
+// PAN Number Validator
+function isValidPAN(pan) {
+  return /^[A-Z]{5}[0-9]{4}[A-Z]$/.test(pan);
+}
+
+console.log(isValidPAN("ABCDE1234F")); // true
+console.log(isValidPAN("abcde1234f")); // false
