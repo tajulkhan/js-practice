@@ -208,4 +208,16 @@ function isValidGSTIN(gstin) {
 console.log(isValidGSTIN("29ABCDE1234F1Z5")); // true
 console.log(isValidGSTIN("ABCDE1234F1Z5"));   // false
 
+//Combine All Validators into a Utility
+const Validators = {
+  email: isValidEmail,
+  phone: isValidPhone,
+  password: isStrongPassword,
+  pan: isValidPAN,
+  aadhaar: isValidAadhaar,
+  date: isValidDate,
+  gstin: isValidGSTIN
+};
 
+// Example usage:
+console.log(Validators.pan("ABCDE1234F")); // true
