@@ -182,3 +182,12 @@ function isValidPAN(pan) {
 
 console.log(isValidPAN("ABCDE1234F")); // true
 console.log(isValidPAN("abcde1234f")); // false
+
+//Aadhaar Number Validator
+function isValidAadhaar(aadhaar) {
+  return /^[2-9]{1}[0-9]{11}$/.test(aadhaar);
+}
+
+console.log(isValidAadhaar("234567890123")); // true
+console.log(isValidAadhaar("012345678901")); // false
+
