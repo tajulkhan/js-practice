@@ -249,5 +249,11 @@ function countFrequencies(arr) {
 console.log(countFrequencies(['a', 'b', 'a', 'c', 'b', 'a']));
 // { a: 3, b: 2, c: 1 }
 
+ // Check for Anagrams
+function isAnagram(a, b) {
+  return a.split('').sort().join('') === b.split('').sort().join('');
+}
+
+console.log(isAnagram("listen", "silent")); // true
 
 
