@@ -272,5 +272,22 @@ Array.prototype.myMap = function(callback) {
 };
 console.log([1, 2, 3].myMap(x => x * 2)); // [2, 4, 6]
 
+// Group by Property (Array of Objects)
+function groupBy(arr, key) {
+  return arr.reduce((acc, obj) => {
+    const value = obj[key];
+    acc[value] = acc[value] || [];
+    acc[value].push(obj);
+    return acc;
+  }, {});
+}
+
+const users = [
+  { name: "Taj", role: "admin" },
+  { name: "John", role: "user" },
+  { name: "Asha", role: "admin" },
+];
+
+console.log(groupBy(users, "role"));
 
 
