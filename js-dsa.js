@@ -245,7 +245,6 @@ function countFrequencies(arr) {
     return acc;
   }, {});
 }
-
 console.log(countFrequencies(['a', 'b', 'a', 'c', 'b', 'a']));
 // { a: 3, b: 2, c: 1 }
 
@@ -253,7 +252,6 @@ console.log(countFrequencies(['a', 'b', 'a', 'c', 'b', 'a']));
 function isAnagram(a, b) {
   return a.split('').sort().join('') === b.split('').sort().join('');
 }
-
 console.log(isAnagram("listen", "silent")); // true
 
 // Reverse Words in a Sentence
