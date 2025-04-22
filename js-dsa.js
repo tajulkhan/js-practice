@@ -256,4 +256,10 @@ function isAnagram(a, b) {
 
 console.log(isAnagram("listen", "silent")); // true
 
+// Reverse Words in a Sentence
+function reverseWords(sentence) {
+  return sentence.split(' ').reverse().join(' ');
+}
+console.log(reverseWords("hello world from Taj")); // "Taj from world hello"
+
 
