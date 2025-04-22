@@ -281,13 +281,11 @@ function groupBy(arr, key) {
     return acc;
   }, {});
 }
-
 const users = [
   { name: "Taj", role: "admin" },
   { name: "John", role: "user" },
   { name: "Asha", role: "admin" },
 ];
-
 console.log(groupBy(users, "role"));
 
 
