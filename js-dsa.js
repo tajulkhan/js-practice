@@ -221,3 +221,13 @@ const Validators = {
 
 // Example usage:
 console.log(Validators.pan("ABCDE1234F")); // true
+
+// Flatten a Nested Array (Recursive & FlatMap)
+function flatten(arr) {
+  return arr.reduce((acc, val) =>
+    Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);
+}
+console.log(flatten([1, [2, [3, [4]], 5]])); // [1, 2, 3, 4, 5]
+
+
+
