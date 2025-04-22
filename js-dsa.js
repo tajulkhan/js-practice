@@ -238,5 +238,16 @@ function debounce(fn, delay) {
   };
 }
 
+// Count Frequency of Items in Array
+function countFrequencies(arr) {
+  return arr.reduce((acc, val) => {
+    acc[val] = (acc[val] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+console.log(countFrequencies(['a', 'b', 'a', 'c', 'b', 'a']));
+// { a: 3, b: 2, c: 1 }
+
 
 
