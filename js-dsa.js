@@ -262,4 +262,15 @@ function reverseWords(sentence) {
 }
 console.log(reverseWords("hello world from Taj")); // "Taj from world hello"
 
+// Custom map Function (Polyfill)
+Array.prototype.myMap = function(callback) {
+  const result = [];
+  for(let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+console.log([1, 2, 3].myMap(x => x * 2)); // [2, 4, 6]
+
+
 
