@@ -229,5 +229,14 @@ function flatten(arr) {
 }
 console.log(flatten([1, [2, [3, [4]], 5]])); // [1, 2, 3, 4, 5]
 
+// Throttle / Debounce Function
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
 
 
