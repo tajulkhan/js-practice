@@ -17,5 +17,19 @@ async function runTsk(){
     const s2 = await stp2(s1);
     console.log(s2);
 }
-
 runTsk();
+
+//Fake API Chain with Delay
+function fakeApi(name, delay) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(`Data from ${name}`);
+    }, delay);
+  });
+}
+async function run() {
+  const a = await fakeApi("ProductService", 1000);
+  const b = await fakeApi("BillingService", 500);
+  console.log(a, "|", b);
+}
+run();
