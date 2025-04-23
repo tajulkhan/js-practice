@@ -44,3 +44,5 @@ function mayFail(flag) {
 mayFail(false)
   .then(console.log)
   .catch(console.error); // catches rejection
+
+
