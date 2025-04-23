@@ -1,2 +1,12 @@
 // Promise Chain
+// Basic Promise Chain
 
+function stp1(){
+    return Promise.resolve("Js");
+}
+function stp2(prev){
+    return Promise.resolve(`${prev} and Css king`);
+}
+stp1()
+    .then(rslt => stp2(rslt))
+    .then(final => console.log(final));
