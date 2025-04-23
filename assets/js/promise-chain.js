@@ -33,3 +33,14 @@ async function run() {
   console.log(a, "|", b);
 }
 run();
+
+ // Promise Error Handling in Chain
+function mayFail(flag) {
+  return new Promise((resolve, reject) => {
+    flag ? resolve("Success") : reject("Something went wrong");
+  });
+}
+
+mayFail(false)
+  .then(console.log)
+  .catch(console.error); // catches rejection
