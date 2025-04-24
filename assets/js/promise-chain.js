@@ -114,3 +114,13 @@ Promise.race([slow, fast]).then(console.log); // → "fast"
 const arr = [90, 34, 89, 65, 23];
 const maxNumber = Math.max(...arr);
 console.log(maxNumber);
+
+// find the largest number using a for loop 
+const numbers = [90, 80, 70, 60, 50];
+let maxNumber = numbers[0];
+for(let i =0; i< numbers.length; i++){
+    if(numbers[i] > maxNumber){
+        maxNumber = numbers[i];
+    }
+}
+console.log(maxNumber);
