@@ -45,4 +45,13 @@ mayFail(false)
   .then(console.log)
   .catch(console.error); // catches rejection
 
+// Real-World: Parallel + Sequential API Calls
+// Parallel (Optimized)
+async function parallelCalls() {
+  const [user, products] = await Promise.all([
+    fakeApi("UserService", 1000),
+    fakeApi("ProductService", 800)
+  ]);
+  console.log({ user, products });
+}
 
