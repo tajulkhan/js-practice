@@ -54,4 +54,9 @@ async function parallelCalls() {
   ]);
   console.log({ user, products });
 }
-
+// Sequential (Controlled flow)
+async function sequentialCalls() {
+  const user = await fakeApi("UserService", 1000);
+  const orders = await fakeApi("OrderService", 700);
+  console.log({ user, orders });
+}
