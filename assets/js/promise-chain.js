@@ -124,3 +124,14 @@ for(let i =0; i< numbers.length; i++){
     }
 }
 console.log(maxNumber);
+
+// find the largest number using a forEach logic 
+
+const numbers = [90, 80, 70, 60, 50];
+let maxNumber = numbers[0];
+numbers.forEach(num => {
+    if(num > maxNumber){
+        maxNumber = num;
+    }
+});
+console.log(maxNumber);
