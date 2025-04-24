@@ -135,3 +135,15 @@ numbers.forEach(num => {
     }
 });
 console.log(maxNumber);
+
+// find the largest number using a reduce method
+
+const numbers = [5, 12, 8, 130, 44];
+const maxNumber = numbers.reduce((max, current) => {
+    return current > max ? current : max;
+});
+console.log(maxNumber);
+
+const maxNumber = numbers.reduce((max, current)=>{
+    return current > max ? 
+})
