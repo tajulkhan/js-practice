@@ -88,3 +88,21 @@ const p3 = Promise.reject("C failed");
 Promise.all([p1, p2, p3])
   .then(console.log)
   .catch(console.error); // → "C failed"
+
+// Promise.allSettled
+const tasks = [
+  Promise.resolve("✔️ Success 1"),
+  Promise.reject("❌ Error 2"),
+  Promise.resolve("✔️ Success 3")
+];
+Promise.allSettled(tasks).then(results => {
+  results.forEach(r => {
+    if (r.status === "fulfilled") {
+      console.log("✅", r.value);
+    } else {
+      console.log("⚠️", r.reason);
+    }
+  });
+});
+
+
