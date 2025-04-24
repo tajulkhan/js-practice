@@ -79,3 +79,12 @@ async function retryUntilSuccess(retries = 5) {
   throw new Error("All retries failed");
 }
 retryUntilSuccess().then(console.log).catch(console.error);
+
+// Promise.all
+const p1 = Promise.resolve("A");
+const p2 = Promise.resolve("B");
+const p3 = Promise.reject("C failed");
+
+Promise.all([p1, p2, p3])
+  .then(console.log)
+  .catch(console.error); // → "C failed"
