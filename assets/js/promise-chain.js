@@ -110,3 +110,7 @@ const slow = new Promise(res => setTimeout(() => res("slow"), 2000));
 const fast = new Promise(res => setTimeout(() => res("fast"), 100));
 Promise.race([slow, fast]).then(console.log); // → "fast"
 
+// Find largest number in array
+const arr = [90, 34, 89, 65, 23];
+const maxNumber = Math.max(...arr);
+console.log(maxNumber);
