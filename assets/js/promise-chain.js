@@ -60,3 +60,22 @@ async function sequentialCalls() {
   const orders = await fakeApi("OrderService", 700);
   console.log({ user, orders });
 }
+
+// Interview Challenge: Retry Async Until Success
+function unstableApiCall() {
+  return Math.random() > 0.7
+    ? Promise.resolve("✅ Success!")
+    : Promise.reject("❌ Failed, retry...");
+}
+async function retryUntilSuccess(retries = 5) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const result = await unstableApiCall();
+      return result;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  throw new Error("All retries failed");
+}
+retryUntilSuccess().then(console.log).catch(console.error);
