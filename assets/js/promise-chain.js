@@ -171,7 +171,9 @@ Promise.allSettled(tasks).then(results => {
     }
   });
 });
+
 //Promise.race
 const slow = new Promise(res => setTimeout(() => res("slow"), 2000));
 const fast = new Promise(res => setTimeout(() => res("fast"), 100));
 Promise.race([slow, fast]).then(console.log); // → "fast"
+
