@@ -147,3 +147,11 @@ console.log(maxNumber);
 const maxNumber = numbers.reduce((max, current)=>{
     return current > max ? 
 })
+//Promise.all 
+const p1 = Promise.resolve("A");
+const p2 = Promise.resolve("B");
+const p3 = Promise.reject("C failed");
+
+Promise.all([p1, p2, p3])
+  .then(console.log)
+  .catch(console.error); // → "C failed"
