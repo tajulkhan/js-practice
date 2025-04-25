@@ -177,3 +177,13 @@ const slow = new Promise(res => setTimeout(() => res("slow"), 2000));
 const fast = new Promise(res => setTimeout(() => res("fast"), 100));
 Promise.race([slow, fast]).then(console.log); // → "fast"
 
+// Promise.any
+const p1 = Promise.reject("Fail 1");
+const p2 = Promise.reject("Fail 2");
+const p3 = Promise.resolve("Success!");
+Promise.any([p1, p2, p3])
+  .then(console.log)      // → "Success!"
+  .catch(console.error);  // Only if all fail
+
+
+
