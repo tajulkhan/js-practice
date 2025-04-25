@@ -185,5 +185,11 @@ Promise.any([p1, p2, p3])
   .then(console.log)      // → "Success!"
   .catch(console.error);  // Only if all fail
 
-
+// Use with Timeout Utility
+function withTimeout(promise, ms) {
+  const timeout = new Promise((_, reject) =>
+    setTimeout(() => reject("⏱️ Timeout"), ms)
+  );
+  return Promise.race([promise, timeout]);
+}
 
