@@ -302,5 +302,22 @@ const square = x => x * x;
 const doubleThenSquare = compose(square, double);
 console.log(doubleThenSquare(3)); // (3*2)^2 = 36
 
+// Proxy (Meta-programming)
+const obj = {
+  name: "Taj",
+};
+const watched = new Proxy(obj, {
+  get(target, key) {
+    console.log(`🔍 Getting ${key}`);
+    return target[key];
+  },
+  set(target, key, value) {
+    console.log(`📝 Setting ${key} = ${value}`);
+    target[key] = value;
+    return true;
+  }
+});
+watched.name;
+watched.age = 30;
 
 
