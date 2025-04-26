@@ -242,6 +242,13 @@ async function tryFallbacks(urls) {
   throw new Error("All fallback sources failed");
 }
 
+const sources = [
+  "https://primary-api.com/data",
+  "https://backup1-api.com/data",
+  "https://backup2-api.com/data"
+];
+
+tryFallbacks(sources).then(console.log).catch(console.error);
 // Closures & Private State
 function counter() {
   let count = 0;
