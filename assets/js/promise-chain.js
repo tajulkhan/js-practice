@@ -279,6 +279,21 @@ const slowSquare = memoize(x => {
 console.log(slowSquare(4)); // logs "Calculating...", 16
 console.log(slowSquare(4)); // cached: 16
 
+ // Custom Event System
+class EventBus {
+  constructor() {
+    this.events = {};
+  }
+  on(event, cb) {
+    (this.events[event] ||= []).push(cb);
+  }
+  emit(event, data) {
+    (this.events[event] || []).forEach(cb => cb(data));
+  }
+}
+const bus = new EventBus();
+bus.on("order", data => console.log("Order received:", data));
+bus.emit("order", { table: 5, total: 200 });
 
 
 
