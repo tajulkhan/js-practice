@@ -320,4 +320,20 @@ const watched = new Proxy(obj, {
 watched.name;
 watched.age = 30;
 
+// Module Pattern (IIFE + Closure)
+const AuthModule = (function () {
+  let token = null;
+  return {
+    login(user) {
+      token = `auth-token-for-${user}`;
+      console.log("Logged in:", token);
+    },
+    getToken() {
+      return token;
+    }
+  };
+})();
+AuthModule.login("taj");
+console.log(AuthModule.getToken()); // secure access
+
 
