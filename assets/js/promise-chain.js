@@ -334,6 +334,27 @@ const AuthModule = (function () {
   };
 })();
 AuthModule.login("taj");
-console.log(AuthModule.getToken()); // secure access
+console.log(AuthModule.getToken()); // secure access 
 
+// Stack (LIFO: Last In, First Out)
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+  push(val) {
+    this.items.push(val);
+  }
+  pop() {
+    return this.items.pop();
+  }
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+  isEmpty() {
+    return this.items.length === 0;
+  }
+}
+const s = new Stack();
+s.push(10); s.push(20);
+console.log(s.pop()); // 20
 
