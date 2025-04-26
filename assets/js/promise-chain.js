@@ -295,5 +295,12 @@ const bus = new EventBus();
 bus.on("order", data => console.log("Order received:", data));
 bus.emit("order", { table: 5, total: 200 });
 
+//Function Composition
+const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
+const double = x => x * 2;
+const square = x => x * x;
+const doubleThenSquare = compose(square, double);
+console.log(doubleThenSquare(3)); // (3*2)^2 = 36
+
 
 
