@@ -227,3 +227,31 @@ async function fetchWithFallback() {
 
 fetchWithFallback();
 
+// Retry Wrapper with Fallback List
+async function tryFallbacks(urls) {
+  for (let url of urls) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`${url} failed`);
+      console.log(`✅ Fetched from ${url}`);
+      return await res.json();
+    } catch (err) {
+      console.warn(`⚠️ Failed at ${url}:`, err.message);
+    }
+  }
+  throw new Error("All fallback sources failed");
+}
+
+// Closures & Private State
+function counter() {
+  let count = 0;
+  return {
+    inc: () => ++count,
+    dec: () => --count,
+    get: () => count
+  };
+}
+const c = counter();
+c.inc(); c.inc();
+console.log(c.get()); // 2 (private!)
+
