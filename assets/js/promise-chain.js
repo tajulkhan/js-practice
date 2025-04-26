@@ -255,3 +255,23 @@ const c = counter();
 c.inc(); c.inc();
 console.log(c.get()); // 2 (private!)
 
+// Memoization (Caching function results)
+function memoize(fn) {
+  const cache = {};
+  return function (arg) {
+    if (arg in cache) return cache[arg];
+    return cache[arg] = fn(arg);
+  };
+}
+
+const slowSquare = memoize(x => {
+  console.log("Calculating...");
+  return x * x;
+});
+
+console.log(slowSquare(4)); // logs "Calculating...", 16
+console.log(slowSquare(4)); // cached: 16
+
+
+
+
