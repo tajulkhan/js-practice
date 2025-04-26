@@ -192,4 +192,38 @@ function withTimeout(promise, ms) {
   );
   return Promise.race([promise, timeout]);
 }
+// Fallback APIs (in Priority Order)
+function fetchFromPrimary() {
+  return fetch("https://primary-api.com/data")
+    .then(res => {
+      if (!res.ok) throw new Error("Primary failed");
+      return res.json();
+    });
+}
+function fetchFromBackup() {
+  return fetch("https://backup-api.com/data")
+    .then(res => {
+      if (!res.ok) throw new Error("Backup failed");
+      return res.json();
+    });
+}
+async function fetchWithFallback() {
+  try {
+    const data = await fetchFromPrimary();
+    console.log("✅ Got data from Primary");
+    return data;
+  } catch (e1) {
+    console.warn("Primary failed:", e1.message);
+    try {
+      const fallbackData = await fetchFromBackup();
+      console.log("✅ Got data from Backup");
+      return fallbackData;
+    } catch (e2) {
+      console.error("Both APIs failed:", e2.message);
+      throw new Error("❌ No data from any source");
+    }
+  }
+}
+
+fetchWithFallback();
 
