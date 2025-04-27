@@ -392,3 +392,37 @@ g.display();
 // A → B, C
 // B → A
 // C → A
+//Graph (Adjacency List)
+class Graph {
+  constructor() {
+    this.adjList = {};
+  }
+
+  addVertex(v) {
+    if (!this.adjList[v]) this.adjList[v] = [];
+  }
+
+  addEdge(v1, v2) {
+    this.adjList[v1].push(v2);
+    this.adjList[v2].push(v1); // bidirectional
+  }
+
+  display() {
+    for (let vertex in this.adjList) {
+      console.log(vertex, "→", this.adjList[vertex].join(", "));
+    }
+  }
+}
+
+const g = new Graph();
+g.addVertex("A");
+g.addVertex("B");
+g.addVertex("C");
+
+g.addEdge("A", "B");
+g.addEdge("A", "C");
+
+g.display();
+// A → B, C
+// B → A
+// C → A
