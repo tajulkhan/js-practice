@@ -426,3 +426,19 @@ g.display();
 // A → B, C
 // B → A
 // C → A
+//Breadth-First Search (BFS)
+function bfs(graph, start) {
+  const visited = new Set();
+  const queue = [start];
+
+  while (queue.length) {
+    const node = queue.shift();
+    if (!visited.has(node)) {
+      console.log("Visited:", node);
+      visited.add(node);
+      graph.adjList[node].forEach(n => {
+        if (!visited.has(n)) queue.push(n);
+      });
+    }
+  }
+}
