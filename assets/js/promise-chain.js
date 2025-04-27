@@ -442,3 +442,7 @@ function bfs(graph, start) {
     }
   }
 }
+//Currying & Partial Application
+function curry(fn) { return a => b => fn(a, b); }
+
+
