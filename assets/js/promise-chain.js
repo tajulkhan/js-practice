@@ -444,5 +444,14 @@ function bfs(graph, start) {
 }
 //Currying & Partial Application
 function curry(fn) { return a => b => fn(a, b); }
+//Microtasks vs Macrotasks
+console.log("Start");
 
+setTimeout(() => console.log("Macrotask: Timeout"), 0);
+
+Promise.resolve()
+  .then(() => console.log("Microtask: Promise 1"))
+  .then(() => console.log("Microtask: Promise 2"));
+
+console.log("End");
 
