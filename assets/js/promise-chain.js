@@ -468,3 +468,25 @@ const prms = new Promise((resolve, reject)=>{
 prms
   .then(result => console.log("Resolved:", result))
   .catch(error => console.log("Rejected:", error));
+
+Promise async/await
+
+async function fetchData(){
+    try{
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data = await res.json();
+        console.log(data);
+    }catch(err){
+        console.error(err)
+    }
+}
+fetchData();
+
+
+
+
+
+
+
+
+
