@@ -518,5 +518,20 @@ async function testSleep() {
 
 testSleep();
 
+// Retry an API call 3 times before giving up
+async function retryRequest(fn, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (i === retries - 1) throw err;
+    }
+  }
+}
+
+// Usage:
+retryRequest(() => fetch('https://unstable-api.com'))
+  .then(res => console.log('Success!'))
+  .catch(err => console.error('Failed after 3 tries'));
 
 
