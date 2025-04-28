@@ -500,6 +500,11 @@ async function retry(fn, retries = 3) {
 }
 retry(() => fetch("https://unstable-api.com"));
 
+// Quick Async MCQ (self-check)
+console.log("A");
+setTimeout(() => console.log("B"), 0);
+Promise.resolve().then(() => console.log("C"));
+console.log("D");
 
 
 
