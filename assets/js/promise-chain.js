@@ -482,6 +482,11 @@ async function fetchData(){
 }
 fetchData();
 
+// SetTimeout vs Promise Timing (Microtask vs Macrotask)
+console.log("Start");
+setTimeout(() => console.log("Timeout"), 0);
+Promise.resolve().then(() => console.log("Promise"));
+console.log("End");
 
 
 
