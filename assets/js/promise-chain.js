@@ -455,3 +455,16 @@ Promise.resolve()
 
 console.log("End");
 
+const ok = true;
+const prms = new Promise((resolve, reject)=>{
+    
+    if(ok){
+        resolve("OK")
+    } else{
+        reject("Fail")
+    }
+});
+
+prms
+  .then(result => console.log("Resolved:", result))
+  .catch(error => console.log("Rejected:", error));
