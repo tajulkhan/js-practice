@@ -510,7 +510,6 @@ console.log("D");
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-// Usage
 async function testSleep() {
   console.log("Start sleeping...");
   await sleep(2000); // waits 2 seconds
