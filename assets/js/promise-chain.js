@@ -528,7 +528,6 @@ async function retryRequest(fn, retries = 3) {
     }
   }
 }
-
 // Usage:
 retryRequest(() => fetch('https://unstable-api.com'))
   .then(res => console.log('Success!'))
@@ -543,7 +542,6 @@ function fetchWithTimeout(url, ms) {
     )
   ]);
 }
-
 // Usage
 fetchWithTimeout("https://jsonplaceholder.typicode.com/posts", 1000)
   .then(res => res.json())
