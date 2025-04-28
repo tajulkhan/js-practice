@@ -506,8 +506,17 @@ setTimeout(() => console.log("B"), 0);
 Promise.resolve().then(() => console.log("C"));
 console.log("D");
 
+// Create a sleep(ms) function
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+// Usage
+async function testSleep() {
+  console.log("Start sleeping...");
+  await sleep(2000); // waits 2 seconds
+  console.log("Woke up!");
 
-
+testSleep();
 
 
 
