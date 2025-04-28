@@ -534,4 +534,21 @@ retryRequest(() => fetch('https://unstable-api.com'))
   .then(res => console.log('Success!'))
   .catch(err => console.error('Failed after 3 tries'));
 
+//Implement a Timeout Promise
+function fetchWithTimeout(url, ms) {
+  return Promise.race([
+    fetch(url),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Timeout!")), ms)
+    )
+  ]);
+}
+
+// Usage
+fetchWithTimeout("https://jsonplaceholder.typicode.com/posts", 1000)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err.message));
+
+
 
