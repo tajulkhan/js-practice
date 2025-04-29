@@ -8,5 +8,19 @@ urls.forEach(async (url) => {
 });
 // ❌ this won't wait!
 
+// Solution: Use for...of + await
+async function fetchInOrder(urls) {
+  for (const url of urls) {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log("✅", data);
+    } catch (err) {
+      console.error("❌ Failed:", err.message);
+    }
+  }
+}
+
+
 
 
