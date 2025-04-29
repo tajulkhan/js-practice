@@ -21,6 +21,21 @@ async function fetchInOrder(urls) {
   }
 }
 
+// What if you want parallel fetch?
+async function fetchInParallel(urls) {
+  try {
+    const results = await Promise.all(
+      urls.map(async (url) => {
+        const res = await fetch(url);
+        return res.json();
+      })
+    );
+    console.log("✅ All done:", results);
+  } catch (err) {
+    console.error("❌ At least one failed:", err.message);
+  }
+}
+
 
 
 
