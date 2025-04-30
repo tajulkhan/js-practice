@@ -50,6 +50,15 @@ async function fetchWithRetry(url, retries = 3) {
   }
 }
 
-
+async function fetchUrlsWithRetries(urls) {
+  for (const url of urls) {
+    try {
+      const data = await fetchWithRetry(url);
+      console.log("✅ Success:", data);
+    } catch (err) {
+      console.error("❌ Final fail for", url, ":", err.message);
+    }
+  }
+}
 
 
