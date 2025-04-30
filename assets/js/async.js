@@ -36,6 +36,20 @@ async function fetchInParallel(urls) {
   }
 }
 
+//Custom Retry Inside Loop
+async function fetchWithRetry(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Bad response");
+      return await res.json();
+    } catch (err) {
+      if (i === retries - 1) throw err;
+      console.warn(`Retrying ${url} (${i + 1})...`);
+    }
+  }
+}
+
 
 
 
