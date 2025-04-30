@@ -61,4 +61,20 @@ async function fetchUrlsWithRetries(urls) {
   }
 }
 
+// map(...).catch(...) with Promise.all (for partial success)
+const urls = ['url1', 'url2', 'url3'];
+const promises = urls.map((url) =>
+  fetch(url)
+    .then((res) => res.json())
+    .catch((err) => {
+      console.warn(`❌ Failed for ${url}: ${err.message}`);
+      return null; // fallback value
+    })
+);
+Promise.all(promises).then((results) => {
+  console.log("✅ Partial results:", results); // some may be null
+});
+
+
+
 
