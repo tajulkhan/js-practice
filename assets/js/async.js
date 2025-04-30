@@ -75,6 +75,17 @@ Promise.all(promises).then((results) => {
   console.log("✅ Partial results:", results); // some may be null
 });
 
+// Promise.allSettled() (show success + failure explicitly)
+const promises = urls.map((url) => fetch(url).then(res => res.json()));
+Promise.allSettled(promises).then((results) => {
+  results.forEach((result, idx) => {
+    if (result.status === "fulfilled") {
+      console.log(`✅ [${idx}]`, result.value);
+    } else {
+      console.warn(`❌ [${idx}]`, result.reason.message);
+    }
+  });
+});
 
 
 
