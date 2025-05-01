@@ -101,5 +101,11 @@ Promise.all(promises).then((results) => {
   console.log("Results:", results);
 });
 
+const userUrls = [
+  "https://jsonplaceholder.typicode.com/users/1",
+  "https://jsonplaceholder.typicode.com/users/9999",  // non-existent
+  "https://jsonplaceholder.typicode.com/users/3"
+];
+
 
 
