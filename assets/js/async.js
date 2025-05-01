@@ -87,20 +87,6 @@ Promise.allSettled(promises).then((results) => {
   });
 });
 
-// Mix .map() + async/await inside loop (if you need more logic)
-const fetchWithHandler = async (url) => {
-  try {
-    const res = await fetch(url);
-    return await res.json();
-  } catch (err) {
-    console.error(`Error fetching ${url}:`, err.message);
-    return null;
-  }
-};
-const promises = urls.map(fetchWithHandler);
-Promise.all(promises).then((results) => {
-  console.log("Results:", results);
-});
 
 
 
