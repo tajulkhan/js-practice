@@ -107,5 +107,24 @@ const userUrls = [
   "https://jsonplaceholder.typicode.com/users/3"
 ];
 
+const fetchUsers = async () => {
+  const userPromises = userUrls.map((url) =>
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error("User not found");
+        return res.json();
+      })
+      .catch((err) => {
+        console.warn(`❌ Failed to fetch ${url}: ${err.message}`);
+        return null; // fallback for that item
+      })
+  );
 
+  const users = await Promise.all(userPromises);
+  const validUsers = users.filter((u) => u !== null);
+
+  console.log("✅ Valid users:", validUsers);
+};
+
+fetchUsers();
 
