@@ -128,3 +128,33 @@ const fetchUsers = async () => {
 
 fetchUsers();
 
+// map with Retry
+const fetchWithRetry = async (url, retries = 2) => {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Failed fetch");
+      return await res.json();
+    } catch (err) {
+      if (i === retries) {
+        console.warn(`❌ Final fail for ${url}`);
+        return null;
+      }
+      console.log(`🔁 Retrying ${url} (${i + 1})`);
+    }
+  }
+};
+
+const usersWithRetry = async () => {
+  const promises = userUrls.map((url) => fetchWithRetry(url, 2));
+  const users = await Promise.all(promises);
+  console.log(users.filter(Boolean));
+};
+
+usersWithRetry();
+
+
+
+
+
+
