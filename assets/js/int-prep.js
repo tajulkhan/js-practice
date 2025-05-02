@@ -11,3 +11,11 @@ function outer(){
 const fn = outer();
 fn();
 fn();
+
+// Modify the code using a closure to print 0 1 2.
+for(var i = 0; i < 3; i++){
+    (function(i){
+        setTimeout(()=> console.log(i))
+    })(i)
+}
+
