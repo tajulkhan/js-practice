@@ -22,3 +22,16 @@ for(var i = 0; i < 3; i++){
 for(let i =0; i < 3; i++){
     setTimeout(()=> console.log(i));
 }
+
+// Closure-Based createCounter
+function createCounter(){
+    let count = 0;
+    return function(){
+        count++;
+        return count;
+    };
+}
+const counter = createCounter();
+for(var i=0; i<3; i++){
+    console.log(counter());
+}
