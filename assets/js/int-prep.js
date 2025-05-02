@@ -18,4 +18,7 @@ for(var i = 0; i < 3; i++){
         setTimeout(()=> console.log(i))
     })(i)
 }
-
+// Modern Alternative with let (Block Scope Fix):
+for(let i =0; i < 3; i++){
+    setTimeout(()=> console.log(i));
+}
