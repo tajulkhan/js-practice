@@ -63,3 +63,9 @@ console.log(counter.increment());
 console.log(counter.decrement());
 console.log(counter.reset());
 console.log(counter.getCount());
+
+// 🔒 What is a Closure?
+// A closure is a function that:
+// Remembers the variables from the place where it was defined (its lexical scope),
+// Even after that outer function has finished executing.
+// So, closures allow inner functions to access variables from their outer function, even after the outer function is done.
