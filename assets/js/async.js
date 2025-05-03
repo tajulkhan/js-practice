@@ -153,14 +153,6 @@ const usersWithRetry = async () => {
 usersWithRetry();
 
  // Simulated setup (provided for you):
-function fakeOrderApi(orderId) {
-  return new Promise((resolve, reject) => {
-    const succeed = Math.random() > 0.3; // 70% chance of success
-    setTimeout(() => {
-      succeed ? resolve(`Order ${orderId} processed`) : reject(new Error(`Failed ${orderId}`));
-    }, 500);
-  });
-}
 
 
 
