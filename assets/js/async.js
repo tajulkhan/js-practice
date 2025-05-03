@@ -162,10 +162,3 @@ function fakeOrderApi(orderId) {
   });
 }
 
-
-
-
-
-
-
-
