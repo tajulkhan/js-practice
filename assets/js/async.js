@@ -127,7 +127,6 @@ const fetchUsers = async () => {
 };
 
 fetchUsers();
-
 // map with Retry
 const fetchWithRetry = async (url, retries = 2) => {
   for (let i = 0; i <= retries; i++) {
