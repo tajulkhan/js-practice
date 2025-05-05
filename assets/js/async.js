@@ -190,3 +190,7 @@ const nums = [1, 2, 3, 4, 5];
 double = nums.map(num=> num * 2);
 console.log(double);
 
+//setTimeout Takes a function as a parameter — also a HOF.
+setTimeout(()=>{
+    console.log("Hii")
+}, 1500)
