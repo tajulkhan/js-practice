@@ -175,5 +175,15 @@ function once(fn) {
     return result;
   };
 }
+//usage
+const init = once(() => {
+  console.log("Initialized");
+  return 42;
+});
+
+console.log(init()); // Initialized → 42
+console.log(init()); // (nothing) → 42
+console.log(init()); // (nothing) → 42
+
 
 
