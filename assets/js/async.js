@@ -185,5 +185,8 @@ console.log(init()); // Initialized → 42
 console.log(init()); // (nothing) → 42
 console.log(init()); // (nothing) → 42
 
-
+// Higher-Order Function Array.map()
+const nums = [1, 2, 3, 4, 5];
+double = nums.map(num=> num * 2);
+console.log(double);
 
