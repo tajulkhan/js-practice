@@ -229,7 +229,7 @@ function curriedAdd(a) {
 }
 console.log(curriedAdd(2)(3))
 
-//General Currying Function:
+//General Currying Function: 
 function curry(fn) {
   return function curried(...args) {
     if (args.length >= fn.length) {
@@ -241,5 +241,16 @@ function curry(fn) {
     }
   };
 }
+// Usage:
+function multiply(a, b, c) {
+  return a * b * c;
+}
+
+const curriedMultiply = curry(multiply);
+
+console.log(curriedMultiply(2)(3)(4)); // 24
+console.log(curriedMultiply(2, 3)(4)); // 24
+console.log(curriedMultiply(2)(3, 4)); // 24
+
 
 
