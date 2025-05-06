@@ -229,4 +229,17 @@ function curriedAdd(a) {
 }
 console.log(curriedAdd(2)(3))
 
+//General Currying Function:
+function curry(fn) {
+  return function curried(...args) {
+    if (args.length >= fn.length) {
+      return fn.apply(this, args);
+    } else {
+      return function (...next) {
+        return curried(...args, ...next);
+      };
+    }
+  };
+}
+
 
