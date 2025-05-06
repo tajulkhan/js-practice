@@ -214,3 +214,12 @@ function counter(count) {
 // access function
 counter(5);
 
+// (before vs after): 
+// Normal function
+function add(a, b){
+    return a + b;
+}
+console.log(add(1, 2))
+
+
+
