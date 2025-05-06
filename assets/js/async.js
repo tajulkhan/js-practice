@@ -252,5 +252,11 @@ console.log(curriedMultiply(2)(3)(4)); // 24
 console.log(curriedMultiply(2, 3)(4)); // 24
 console.log(curriedMultiply(2)(3, 4)); // 24
 
+// Reusability via Partial Application
+function multiply(a, b) {
+  return a * b;
+}
+const double = multiply.bind(null, 2); 
+console.log(double(5)); 
 
 
