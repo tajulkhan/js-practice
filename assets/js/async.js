@@ -274,5 +274,9 @@ const withRole = role => user => user.role === role;
 const isAdmin = withRole("admin");
 console.log(isAdmin({ name: "Taj", role: "admin" })); // true
 
+// Cleaner Declarative Code false
+const withRole = role => user => user.role === role;
+const isAdmin = withRole("admin");
+console.log(isAdmin({ name: "Taj", role: "manager" })); // false
 
 
