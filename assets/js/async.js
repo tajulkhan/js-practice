@@ -263,3 +263,12 @@ console.log(double(5));
 const curriedMultiply = a => b => a * b;
 const double = curriedMultiply(2);
 console.log(double(5)); 
+
+// Composability
+const add = a => b => a + b;
+const increment = add(1);
+console.log(increment(4)); // 5
+
+
+
+
