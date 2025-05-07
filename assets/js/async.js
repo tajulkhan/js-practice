@@ -269,6 +269,10 @@ const add = a => b => a + b;
 const increment = add(1);
 console.log(increment(4)); // 5
 
+// Cleaner Declarative Code true
+const withRole = role => user => user.role === role;
+const isAdmin = withRole("admin");
+console.log(isAdmin({ name: "Taj", role: "admin" })); // true
 
 
 
