@@ -290,3 +290,28 @@ function countOccurrences(arr) {
 console.log(countOccurrences(['a', 'b', 'a', 'c', 'b', 'a']));
 // { a: 3, b: 2, c: 1 }
 
+// Group People by Age
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 20 },
+  { name: 'Charlie', age: 30 },
+];
+
+function groupByAge(people) {
+  const grouped = {};
+  for (let person of people) {
+    const { age } = person;
+    if (!grouped[age]) grouped[age] = [];
+    grouped[age].push(person);
+  }
+  return grouped;
+}
+
+console.log(groupByAge(people));
+/*
+{
+  20: [{ name: 'Bob', age: 20 }],
+  30: [{ name: 'Alice', age: 30 }, { name: 'Charlie', age: 30 }]
+}
+*/
+
