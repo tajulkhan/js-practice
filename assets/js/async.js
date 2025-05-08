@@ -314,4 +314,17 @@ console.log(groupByAge(people));
   30: [{ name: 'Alice', age: 30 }, { name: 'Charlie', age: 30 }]
 }
 */
+// Swap Object Keys and Values
+function swapKeysAndValues(obj) {
+  const swapped = {};
+  for (let key in obj) {
+    swapped[obj[key]] = key;
+  }
+  return swapped;
+}
+
+console.log(swapKeysAndValues({ a: 1, b: 2 }));
+// { 1: "a", 2: "b" }
+
+
 
