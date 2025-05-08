@@ -279,4 +279,14 @@ const withRole = role => user => user.role === role;
 const isAdmin = withRole("admin");
 console.log(isAdmin({ name: "Taj", role: "manager" })); // false
 
+// Count Occurrences in Array → Store in Object
+function countOccurrences(arr) {
+  const count = {};
+  for (let item of arr) {
+    count[item] = (count[item] || 0) + 1;
+  }
+  return count;
+}
+console.log(countOccurrences(['a', 'b', 'a', 'c', 'b', 'a']));
+// { a: 3, b: 2, c: 1 }
 
