@@ -336,7 +336,6 @@ function mergeWithSum(obj1, obj2) {
 
   return result;
 }
-
 console.log(mergeWithSum({ a: 1, b: 2 }, { b: 3, c: 4 }));
 // { a: 1, b: 5, c: 4 }
 
