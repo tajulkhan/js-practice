@@ -326,5 +326,18 @@ function swapKeysAndValues(obj) {
 console.log(swapKeysAndValues({ a: 1, b: 2 }));
 // { 1: "a", 2: "b" }
 
+// Merge Two Objects with Overlapping Keys
+function mergeWithSum(obj1, obj2) {
+  const result = { ...obj1 };
+
+  for (let key in obj2) {
+    result[key] = (result[key] || 0) + obj2[key];
+  }
+
+  return result;
+}
+
+console.log(mergeWithSum({ a: 1, b: 2 }, { b: 3, c: 4 }));
+// { a: 1, b: 5, c: 4 }
 
 
