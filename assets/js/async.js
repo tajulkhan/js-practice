@@ -189,7 +189,6 @@ console.log(init()); // (nothing) → 42
 const nums = [1, 2, 3, 4, 5];
 double = nums.map(num=> num * 2);
 console.log(double);
-
 //setTimeout Takes a function as a parameter — also a HOF.
 setTimeout(()=>{
     console.log("Hii")
@@ -296,7 +295,6 @@ const people = [
   { name: 'Bob', age: 20 },
   { name: 'Charlie', age: 30 },
 ];
-
 function groupByAge(people) {
   const grouped = {};
   for (let person of people) {
@@ -306,7 +304,6 @@ function groupByAge(people) {
   }
   return grouped;
 }
-
 console.log(groupByAge(people));
 /*
 {
