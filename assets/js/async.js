@@ -343,5 +343,15 @@ for (let key in user) {
 // name → Taj
 // age → 25
 // city → Dubai
+// Add 1 to All Values in an Object (number values)
+const scores = { math: 80, science: 70, english: 90 };
+function addOne(obj) {
+  for (let key in obj) {
+    obj[key] = obj[key] + 1;
+  }
+  return obj;
+}
+console.log(addOne(scores));
+// { math: 81, science: 71, english: 91 }
 
 
