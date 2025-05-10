@@ -106,7 +106,6 @@ const userUrls = [
   "https://jsonplaceholder.typicode.com/users/9999",  // non-existent
   "https://jsonplaceholder.typicode.com/users/3"
 ];
-
 const fetchUsers = async () => {
   const userPromises = userUrls.map((url) =>
     fetch(url)
@@ -162,7 +161,6 @@ function fakeOrderApi(orderId) {
 }
 
 // once() Function (Closure + Control)
-
 function once(fn) {
   let called = false;
   let result;
