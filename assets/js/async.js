@@ -334,5 +334,14 @@ function mergeWithSum(obj1, obj2) {
 }
 console.log(mergeWithSum({ a: 1, b: 2 }, { b: 3, c: 4 }));
 // { a: 1, b: 5, c: 4 }
+// Print All Keys and Values in an Object
+const user = { name: 'Taj', age: 25, city: 'Dubai' };
+
+for (let key in user) {
+  console.log(key, "→", user[key]);
+}
+// name → Taj
+// age → 25
+// city → Dubai
 
 
