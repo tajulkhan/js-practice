@@ -354,4 +354,15 @@ function addOne(obj) {
 console.log(addOne(scores));
 // { math: 81, science: 71, english: 91 }
 
+// Count Keys in an Object
+function countKeys(obj) {
+  let count = 0;
+  for (let key in obj) {
+    count++;
+  }
+  return count;
+}
+console.log(countKeys({ a: 1, b: 2, c: 3 }));
+// 3
+
 
