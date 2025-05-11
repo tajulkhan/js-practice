@@ -33,7 +33,6 @@ async function fetchInParallel(urls) {
     console.error("❌ At least one failed:", err.message);
   }
 }
-
 //Custom Retry Inside Loop
 async function fetchWithRetry(url, retries = 3) {
   for (let i = 0; i < retries; i++) {
