@@ -19,7 +19,6 @@ async function fetchInOrder(urls) {
     }
   }
 }
-
 // What if you want parallel fetch?
 async function fetchInParallel(urls) {
   try {
