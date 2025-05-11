@@ -191,7 +191,6 @@ console.log(double);
 setTimeout(()=>{
     console.log("Hii")
 }, 1500)
-
 // JavaScript Recursion Program to countdown till 1
 // recursive function
 function counter(count) {
