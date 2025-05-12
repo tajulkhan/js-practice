@@ -32,3 +32,27 @@ function ageCategory(people) {
 }
 console.log(ageCategory({ John: 12, Anna: 17, Mike: 25 }));
 // { John: 'Child', Anna: 'Teen', Mike: 'Adult' }
+
+// Assign Grades Based on Score
+function assignGrades(marks) {
+  const grades = {};
+  for (let student in marks) {
+    const score = marks[student];
+    if (score >= 90) {
+      grades[student] = 'A';
+    } else if (score >= 75) {
+      grades[student] = 'B';
+    } else if (score >= 60) {
+      grades[student] = 'C';
+    } else {
+      grades[student] = 'F';
+    }
+  }
+  return grades;
+}
+console.log(assignGrades({ Raj: 88, Simran: 95, Aman: 55 }));
+// { Raj: 'B', Simran: 'A', Aman: 'F' }
+
+
+
+
