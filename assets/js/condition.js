@@ -53,6 +53,25 @@ function assignGrades(marks) {
 console.log(assignGrades({ Raj: 88, Simran: 95, Aman: 55 }));
 // { Raj: 'B', Simran: 'A', Aman: 'F' }
 
+// Tag Employees by Work Hours
+function tagByWorkHours(employees) {
+  const result = {};
+  for (let name in employees) {
+    const hours = employees[name];
+    if (hours >= 40) {
+      result[name] = 'Full-time';
+    } else if (hours >= 20) {
+      result[name] = 'Part-time';
+    } else {
+      result[name] = 'Intern';
+    }
+  }
+  return result;
+}
+
+console.log(tagByWorkHours({ Ali: 45, Zara: 25, Tom: 10 }));
+// { Ali: 'Full-time', Zara: 'Part-time', Tom: 'Intern' }
+
 
 
 
