@@ -89,6 +89,24 @@ function stockStatus(items) {
 
 console.log(stockStatus({ rice: 10, oil: 2, sugar: 0 }));
 // { rice: 'In Stock', oil: 'Low Stock', sugar: 'Out of Stock' }
+// Income Tax Slab Labeling
+function taxSlab(income) {
+  const slab = {};
+  for (let person in income) {
+    const amt = income[person];
+    if (amt > 1000000) {
+      slab[person] = 'High';
+    } else if (amt > 500000) {
+      slab[person] = 'Medium';
+    } else {
+      slab[person] = 'Low';
+    }
+  }
+  return slab;
+}
+
+console.log(taxSlab({ Arun: 450000, Neha: 1200000, Meera: 600000 }));
+// { Arun: 'Low', Neha: 'High', Meera: 'Medium' }
 
 
 
