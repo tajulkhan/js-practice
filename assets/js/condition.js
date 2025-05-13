@@ -72,6 +72,24 @@ function tagByWorkHours(employees) {
 console.log(tagByWorkHours({ Ali: 45, Zara: 25, Tom: 10 }));
 // { Ali: 'Full-time', Zara: 'Part-time', Tom: 'Intern' }
 
+ // Check Stock Availability
+function stockStatus(items) {
+  const status = {};
+  for (let item in items) {
+    if (items[item] === 0) {
+      status[item] = 'Out of Stock';
+    } else if (items[item] < 5) {
+      status[item] = 'Low Stock';
+    } else {
+      status[item] = 'In Stock';
+    }
+  }
+  return status;
+}
+
+console.log(stockStatus({ rice: 10, oil: 2, sugar: 0 }));
+// { rice: 'In Stock', oil: 'Low Stock', sugar: 'Out of Stock' }
+
 
 
 
