@@ -108,6 +108,21 @@ function taxSlab(income) {
 console.log(taxSlab({ Arun: 450000, Neha: 1200000, Meera: 600000 }));
 // { Arun: 'Low', Neha: 'High', Meera: 'Medium' }
 
+// Object + Loop + Condition (Part 3 — Real-Use Logic)
+// Mark Products as Discounted or Not
+function markDiscounts(products) {
+  const result = {};
+  for (let name in products) {
+    const price = products[name];
+    if (price >= 1000) {
+      result[name] = 'Discounted';
+    } else {
+      result[name] = 'Regular Price';
+    }
+  }
+  return result;
+}
 
-
+console.log(markDiscounts({ TV: 1500, Pen: 20, Laptop: 2000 }));
+// { TV: 'Discounted', Pen: 'Regular Price', Laptop: 'Discounted' }
 
