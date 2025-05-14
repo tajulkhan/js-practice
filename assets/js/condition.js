@@ -151,4 +151,31 @@ const input = {
 
 console.log(productStatus(input));
 // { TV: 'Premium Available', Pen: 'Regular Available', Laptop: 'Out of Stock' }
+// Score Students with if...else + Nested Object
+function gradeStudents(students) {
+  const result = {};
+
+  for (let name in students) {
+    const { marks, attendance } = students[name];
+
+    if (marks >= 90 && attendance >= 90) {
+      result[name] = 'Top Performer';
+    } else if (marks >= 70) {
+      result[name] = 'Good';
+    } else {
+      result[name] = 'Needs Improvement';
+    }
+  }
+
+  return result;
+}
+
+const input = {
+  Asha: { marks: 95, attendance: 95 },
+  Ravi: { marks: 80, attendance: 70 },
+  Tom: { marks: 60, attendance: 85 },
+};
+
+console.log(gradeStudents(input));
+// { Asha: 'Top Performer', Ravi: 'Good', Tom: 'Needs Improvement' }
 
