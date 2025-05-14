@@ -126,3 +126,29 @@ function markDiscounts(products) {
 console.log(markDiscounts({ TV: 1500, Pen: 20, Laptop: 2000 }));
 // { TV: 'Discounted', Pen: 'Regular Price', Laptop: 'Discounted' }
 
+// Categorize Products by Price & Stock
+function productStatus(products) {
+  const result = {};
+  for (let name in products) {
+    const { price, stock } = products[name];
+
+    if (stock === 0) {
+      result[name] = 'Out of Stock';
+    } else if (price >= 1000) {
+      result[name] = 'Premium Available';
+    } else {
+      result[name] = 'Regular Available';
+    }
+  }
+  return result;
+}
+
+const input = {
+  TV: { price: 1200, stock: 10 },
+  Pen: { price: 20, stock: 100 },
+  Laptop: { price: 2000, stock: 0 },
+};
+
+console.log(productStatus(input));
+// { TV: 'Premium Available', Pen: 'Regular Available', Laptop: 'Out of Stock' }
+
