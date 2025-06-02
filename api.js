@@ -29,3 +29,10 @@ const fetchProductData = async (urls) => {
     }
 };
 fetchProductData(apiEndPoints);
+// debugger js
+function test() {
+    let n = 42;
+    debugger; // Execution pauses here
+    console.log(n);
+}
+test();
