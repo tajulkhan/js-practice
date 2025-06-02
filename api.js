@@ -31,7 +31,7 @@ fetchProductData(apiEndPoints);
 // debugger js
 function test() {
     let n = 42;
-    debugger; // Execution pauses here
+    debugger;
     console.log(n);
 }
 test();
