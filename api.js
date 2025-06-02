@@ -10,7 +10,6 @@ const apiEndPoints = [
 "https://fakestoreapi.com/products/5"
 
 ];
-
 const fetchProductData = async (urls) => {
     try{
         const response = await Promise.all(
