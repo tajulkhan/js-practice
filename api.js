@@ -40,3 +40,7 @@ let arr = [10, 20, 30, 40];
 for(let i=0; i< arr.length; i++){
     console.log(arr[i]);
 }
+let x = 5
+for (let i = 1; i <= 10; i++) {
+  console.log(x * i); 
+}
