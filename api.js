@@ -44,3 +44,14 @@ let x = 5
 for (let i = 1; i <= 10; i++) {
   console.log(x * i); 
 }
+// Updating Counter Variable
+const subjects = ["Maths", "Science", "Polity", "History"];
+let i = 0;
+let len = subjects.length;
+let gfg = "";
+for (; i < len;) {
+    gfg += subjects[i];
+    //can be increased inside loop
+    i++;
+}
+console.log(gfg)
