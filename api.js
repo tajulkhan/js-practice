@@ -66,3 +66,10 @@ while(data>=0){
     console.log(data); //7 6
     data--;
 }
+
+// The break statement exits the loop when i === 1,
+//  but the console.log executes only for i = 0 before the loop is terminated.
+for (let i = 0; i < 3; i++) {
+    if (i === 1) break;
+    console.log(i); //0
+}
