@@ -73,3 +73,13 @@ for (let i = 0; i < 3; i++) {
     if (i === 1) break;
     console.log(i); //0
 }
+
+// The loop will run till i=6 after which the loop will break as data becomes equal to 30
+let i = 5;
+while (true) {
+    console.log(i); // 5 10 15 20 25 30
+    i += 5;
+    if (i > 30) {
+        break;
+    }
+}
