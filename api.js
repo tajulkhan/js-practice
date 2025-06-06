@@ -54,3 +54,15 @@ for (; i < len;) {
     i++;
 }
 console.log(gfg)
+
+// Once data becomes equal to 5 the console.log() 
+// statement will be ignored because of the continue keyword.
+let data = 7
+while(data>=0){
+    if (data<=5){
+        data--;
+        continue;
+    }
+    console.log(data); //7 6
+    data--;
+}
