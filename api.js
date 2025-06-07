@@ -88,3 +88,6 @@ while (true) {
 // Ans: To define a block of code to test for errors
 // Explanation:
 // The try block is used to test code for errors. If an error occurs, control is passed to the catch block.
+
+// What is the purpose of the try block in JavaScript?
+// Ans: To define a block of code to test for errors
