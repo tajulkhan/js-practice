@@ -81,6 +81,12 @@ while (true) {
         break;
     }
 }
+ // While Loop
+let count = 1;
+while (count <= 5) {
+  console.log(count);
+  count++;
+}
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
