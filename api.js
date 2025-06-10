@@ -87,7 +87,13 @@ while (count <= 5) {
   console.log(count);
   count++;
 }
-
+//Using While Loop to find Traverse an Array
+let arr = [10, 20, 30, 40];
+let  i =0;
+while( i<arr.length){
+    console.log(arr[i]);
+    i++;
+}
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
