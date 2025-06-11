@@ -104,6 +104,15 @@ const str = "Hello";
 for(const char of str){
     console.log(char);
 }
+// Iterating Over a Map using for...of
+const m = new Map([
+    ["name", "Akash"],
+    ["age", 25],
+    ["city", "Noida"]
+]);
+for(let [key, value] of m){
+    console.log(`${key}: ${value}`);
+}
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
