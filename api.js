@@ -94,6 +94,11 @@ while( i<arr.length){
     console.log(arr[i]);
     i++;
 }
+// Iterating Over an Array using for...of
+const a = [ 1, 2, 3, 4, 5 ];
+for(const item of a){
+    console.log(item);
+}
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
