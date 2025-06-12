@@ -118,6 +118,15 @@ let s = new Set([1, 2, 3, 4, 5]);
 for (let val of s) {
     console.log(val);
 }
+// Iterating Over an Object’s Properties using for...of
+let person = {
+    name: "Taj",
+    age: 24,
+    city: "Cbe"
+};
+for(let key of Object.keys(person)){
+    console.log(`${key}: ${person[key]}`);
+}
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
