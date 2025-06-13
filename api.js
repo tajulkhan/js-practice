@@ -127,6 +127,13 @@ let person = {
 for(let key of Object.keys(person)){
     console.log(`${key}: ${person[key]}`);
 }
+// Break and Continue Statements
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break;  
+    }
+    console.log(i);
+}
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
