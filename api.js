@@ -146,6 +146,7 @@ else if (i == 20)
     console.log("i is 20");
 else
     console.log("i is not present");
+
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
