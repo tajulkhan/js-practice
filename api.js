@@ -155,6 +155,17 @@ function checkE(number) {
 }
 console.log(checkE(4));
 console.log(checkE(5));
+
+// Removing item (ECMA-262 Edition 5 code AKA old style JavaScript)
+var value = 3
+var arr = [1, 2, 3, 4, 5, 3]
+arr = arr.filter(function(item) {
+    return item !== value
+})
+console.log(arr)
+// [ 1, 2, 4, 5 ]
+
+
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
