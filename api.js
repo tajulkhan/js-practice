@@ -164,7 +164,16 @@ arr = arr.filter(function(item) {
 })
 console.log(arr)
 // [ 1, 2, 4, 5 ]
+// The splice() method changes the contents of an array by removing existing elements and/or adding new elements.
+const array = [2, 5, 9];
+console.log(array);
+const index = array.indexOf(5);
+if (index > -1) { // only splice array when item is found
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
 
+// array = [2, 9]
+console.log(array);
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
