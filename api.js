@@ -180,6 +180,14 @@ let arr = [1, 2, 3, 4, 5, 3]
 arr = arr.filter(item => item !== value)
 console.log(arr)
 // [ 1, 2, 4, 5 ]
+// Removing multiple items (ECMAScript 7 code)
+let forDeletion = [2, 3, 5]
+let arr = [1, 2, 3, 4, 5, 3]
+arr = arr.filter(item => !forDeletion.includes(item))
+// !!! Read below about array.includes(Intranet exploler) support !!!
+console.log(arr)
+// [ 1, 4 ]
+
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
