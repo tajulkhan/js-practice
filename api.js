@@ -222,6 +222,15 @@ console.log(newArray);
 let courses = ["HTML", "CSS", "JavaScript", "React"];
 let newArray = courses.map(course => course);
 console.log(newArray);
+//Copy Only Specific Items
+let courses = ["HTML", "CSS", "JavaScript", "React"];
+let newArray = [];
+for (let i = 0; i < courses.length; i++) {
+    if (courses[i] !== "CSS") {
+        newArray.push(courses[i]);
+    }
+}
+console.log(newArray); 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
