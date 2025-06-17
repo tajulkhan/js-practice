@@ -207,6 +207,17 @@ for(let i=0; i<courses.length; i++){
     newArray.push(corses[i]);
 }
 console.log(newArray);
+// new array create to for loop and function use to push elements
+let courses = ["HTML", "CSS", "JavaScript", "React"];
+console.log(courses);
+let newArray = [];
+for(let i=0; i<courses.length; i++){
+   function na(course){
+       newArray.push(course);
+   }
+    na(courses[i]);
+}
+console.log(newArray);
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
