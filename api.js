@@ -187,7 +187,18 @@ arr = arr.filter(item => !forDeletion.includes(item))
 // !!! Read below about array.includes(Intranet exploler) support !!!
 console.log(arr)
 // [ 1, 4 ]
-
+// JavaScript Array Reference
+// Create and initialize an array
+let courses = ["HTML", "CSS", "JavaScript", "React"];
+console.log(courses);
+// Create a new empty array
+let newArray = [];
+// forEach loop to push elements
+// into new array
+courses.forEach(function (course) {
+    newArray.push(course);
+});
+console.log(newArray);
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
