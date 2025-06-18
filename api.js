@@ -230,7 +230,19 @@ for (let i = 0; i < courses.length; i++) {
         newArray.push(courses[i]);
     }
 }
-console.log(newArray); 
+console.log(newArray);
+//array forEach() method
+let n = [1, 2, 3, 4, 5];
+n.forEach(function(elem, index){
+    console.log(elem);
+});
+
+
+
+
+
+
+
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
