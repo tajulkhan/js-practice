@@ -236,7 +236,10 @@ let n = [1, 2, 3, 4, 5];
 n.forEach(function(elem, index){
     console.log(elem);
 });
-
+// JS Array reverse() Method
+let a = [1, 2, 3, 4, 5];
+a.reverse();
+console.log(a);
 
 
 
