@@ -246,7 +246,12 @@ let numX2 = number.map(function(num){
     return num * 2;
 });
 console.log(numX2);
-
+// JS filter() Method
+let a1 = [1, 2, 3, 4, 5];
+let a2 = a1.filter(function(elem){
+    return elem % 2 == 0;   
+};
+console.log(a2);
 
 
 
