@@ -240,8 +240,12 @@ n.forEach(function(elem, index){
 let a = [1, 2, 3, 4, 5];
 a.reverse();
 console.log(a);
-
-
+// JS map() method
+let number = [5, 10, 15, 20];
+let numX2 = number.map(function(num){
+    return num * 2;
+});
+console.log(numX2);
 
 
 
