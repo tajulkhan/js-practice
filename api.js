@@ -252,7 +252,17 @@ let a2 = a1.filter(function(elem){
     return elem % 2 == 0;   
 };
 console.log(a2);
+// JS find() & findIndex() Method
+let a = [1, 2, 3, 4, 5];
+let find = a.find(function (elem) {
+    return elem > 4
+});
+console.log(find);
 
+let val = a.findIndex(function (elem) {
+    return elem >= 4
+});
+console.log(val);
 
 
 // What is the purpose of the try block in JavaScript?
