@@ -263,8 +263,14 @@ let val = a.findIndex(function (elem) {
     return elem >= 4
 });
 console.log(val);
-
-
+//JS Array slice() & splice() Method
+let a = [1, 2, 3, 4, 5];
+let slice = a.slice(0, 2);
+console.log("Slice Array: " + slice);
+console.log("Original Array: " + a);
+let splice = a.splice(0, 2);
+console.log("Slice Array: " + splice);
+console.log("Original Array: " + a);
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
