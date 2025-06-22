@@ -271,11 +271,22 @@ console.log("Original Array: " + a);
 let splice = a.splice(0, 2);
 console.log("Slice Array: " + splice);
 console.log("Original Array: " + a);
+
+
+// call back function
+function modifyArray(arr, cb){
+    arr.push(100);
+    cb();
+}
+var arr = [1, 2, 3, 4]
+modifyArray(arr, function(){
+console.log("array has been added", arr);
+});
+
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
 // Explanation:
 // The try block is used to test code for errors. If an error occurs, control is passed to the catch block.
-
 
 // What is the purpose of the try block in JavaScript?
 // Ans: To define a block of code to test for errors
