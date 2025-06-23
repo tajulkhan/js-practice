@@ -20,3 +20,9 @@ fruits.unshift("orange");
 console.log(fruits);
 // 4. How can you remove elements from an array?
 // Elements can be removed from an array using the pop method to remove from the end, and the shift method to remove from the beginning.
+let fruits = ['apple', 'banana', 'cherry'];
+fruits.pop();
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
+
