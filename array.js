@@ -27,3 +27,6 @@ fruits.shift();
 console.log(fruits);
 // 5. What is length property of an array?
 // The length property of an array returns the number of elements in the array. It is a dynamic property, which means it automatically updates when the array changes
+let fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits.length);
+
