@@ -11,3 +11,10 @@ let fruits = ['apple', 'banana', 'cherry'];
 console.log(fruits[0]);
 console.log(fruits[1]);
 console.log(fruits[2]);
+
+// 3. How can you add elements to an array?
+// Elements can be added to an array using the push method to add to the end, and the unshift method to add to the beginning.
+let fruits = ['apple', 'banana'];
+fruits.push("cherry");
+fruits.unshift("orange");
+console.log(fruits);
