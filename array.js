@@ -7,3 +7,7 @@ let fruits = ['apple', 'banana', 'cherry'];
 
 // 2. How do you access the elements of an array?
 // Elements in an array are accessed using their index. The index of the first element is 0, the second element is 1, and so on.
+let fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
