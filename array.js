@@ -31,5 +31,8 @@ let fruits = ['apple', 'banana', 'cherry'];
 console.log(fruits.length);
 // 6. How do you check if a variable is an array?
 // To check if a variable is an array, you can use the Array.isArray method. This method returns true if the variable is an array, and false otherwise.
-
+let fruits = ['apple', 'banana'];
+console.log(Array.isArray(fruits));
+let notArray = 'apple';
+console.log(Array.isArray(notArray));
 
