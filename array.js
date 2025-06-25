@@ -45,3 +45,7 @@ for(let i=0; i<fruits.length; i++){
 // The forEach method is used to execute a provided function once for each array element.
 // It takes a callback function as an argument, which is called with each element, its index, and the entire array.
 // The forEach method does not return a new array and does not modify the original array.
+let fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach((fruit, index) => {
+  	console.log(`Fruit at index ${index} is ${fruit}`);
+});
