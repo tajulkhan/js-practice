@@ -37,3 +37,7 @@ let notArray = 'apple';
 console.log(Array.isArray(notArray));
 // 7. How do you iterate over an array?
 // You can iterate over an array using a for loop. This allows you to access each element in the array by its index.
+let fruits = ['apple', 'banana', 'cherry'];
+for(let i=0; i<fruits.length; i++){
+    console.log(fruits[i]);
+}
