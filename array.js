@@ -49,3 +49,7 @@ let fruits = ['apple', 'banana', 'cherry'];
 fruits.forEach((fruit, index) => {
   	console.log(`Fruit at index ${index} is ${fruit}`);
 });
+// 9. What is the difference between for...of and for...in loops in arrays?
+// The for...of loop iterates over the values of an array, whereas the for...in loop iterates over the keys (indexes) 
+// of an array. The for...of loop is generally preferred for arrays because it directly accesses the elements,
+// while the for...in loop is more suitable for iterating over object properties.
