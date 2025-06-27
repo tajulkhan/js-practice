@@ -56,3 +56,6 @@ fruits.forEach((fruit, index) => {
 // 10. Explain the splice method with an example.
 // The splice method changes the contents of an array by removing or replacing existing elements and/or 
 // adding new elements in place. It modifies the original array and returns an array of the removed elements.
+let fruits = ['apple', 'banana', 'cherry'];
+fruits.splice(1, 1, "mango", "graph");
+console.log(fruits);
