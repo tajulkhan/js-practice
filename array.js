@@ -53,3 +53,6 @@ fruits.forEach((fruit, index) => {
 // The for...of loop iterates over the values of an array, whereas the for...in loop iterates over the keys (indexes) 
 // of an array. The for...of loop is generally preferred for arrays because it directly accesses the elements,
 // while the for...in loop is more suitable for iterating over object properties.
+// 10. Explain the splice method with an example.
+// The splice method changes the contents of an array by removing or replacing existing elements and/or 
+// adding new elements in place. It modifies the original array and returns an array of the removed elements.
