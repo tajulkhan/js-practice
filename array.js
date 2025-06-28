@@ -59,3 +59,8 @@ fruits.forEach((fruit, index) => {
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.splice(1, 1, "mango", "graph");
 console.log(fruits);
+
+
+// Array reduce() Method
+// The array reduce() method reduces an array to a single value by executing a provided function for each value from left to right.
+// Example: Use the reduce() method to accumulate values, such as subtracting numbers.
