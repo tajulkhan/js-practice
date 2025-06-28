@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:green">
+    Welcome to taj js
+</h1>
+<h3>
+    Split multiline string into an array of lines in JavaScript
+</h3>
+<button onclick="myFunction()">
+    Go
+</button>
+
+<p id="StringToArray"></p>
+
+<script>
+    function myFunction() {
+        var string = "Are you ready?" 
+            + "<br>So let's get started";
+    
+        var array = string.split("<br>");
+    
+        document.getElementById("StringToArray")
+            .innerHTML = array;
+    }
+</script>
+</body>
+</html>
