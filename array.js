@@ -64,3 +64,10 @@ console.log(fruits);
 // Array reduce() Method
 // The array reduce() method reduces an array to a single value by executing a provided function for each value from left to right.
 // Example: Use the reduce() method to accumulate values, such as subtracting numbers.
+// Original array
+let numbers = [4, 9, 16, 25];
+let sub = numbers.map(geeks);
+function geeks() {
+    return numbers.map(Math.sqrt);
+}
+console.log(sub);
