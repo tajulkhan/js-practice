@@ -71,3 +71,7 @@ function geeks() {
     return numbers.map(Math.sqrt);
 }
 console.log(sub);
+ // join method
+// 11. How do you use the join method?
+// The join method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. 
+// It is useful for creating a string from the elements of an array, such as converting an array of words into a sentence.
