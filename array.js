@@ -78,3 +78,6 @@ console.log(sub);
 let fruits = ['apple', 'banana', 'cherry'];
 let fruitString = fruits.join(', ');
 console.log(fruitString);
+// 12. What is array destructuring and how does it work?
+// Array destructuring is a syntax that allows you to unpack values from arrays or properties from objects into distinct variables. It provides a convenient way to extract multiple elements 
+// from array and assign them to variables in a single statement. You can also set default values for the variables in case the array does not contain enough elements.
