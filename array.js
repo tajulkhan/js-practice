@@ -91,3 +91,10 @@ console.log(fourth)
 // 13. How do you copy an array?
 // You can copy an array using the spread operator (...) or the Array.from method. Both methods create a shallow copy of the original array. 
 // The spread operator is concise and widely used, while Array.from is useful when you need to convert array-like objects or iterable objects to arrays.
+let fruits = ['apple', 'banana', 'cherry'];
+// Using spread operator
+let fruitsCopy = [...fruits];
+console.log(fruitsCopy);
+// Using Array.from method
+let fruitsCopy2 = Array.from(fruits);
+console.log(fruitsCopy2);
