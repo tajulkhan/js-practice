@@ -101,3 +101,9 @@ console.log(fruitsCopy2);
 // 16. How does the flatMap method work?
 // The flatMap method first maps each element using a mapping function, then flattens the result into a new array. It is similar to map followed by flat with a depth of 
 // 1. The flatMap method is useful for scenarios where you need to both transform and flatten an array in a single step.
+// Creating multilevel array
+const numbers = [['1', '2'], ['3', '4',
+    ['5', ['6'], '7']]];
+
+const flatNumbers = numbers.flat(Infinity);
+console.log(flatNumbers);
