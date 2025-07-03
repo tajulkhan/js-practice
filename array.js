@@ -98,3 +98,6 @@ console.log(fruitsCopy);
 // Using Array.from method
 let fruitsCopy2 = Array.from(fruits);
 console.log(fruitsCopy2);
+// 16. How does the flatMap method work?
+// The flatMap method first maps each element using a mapping function, then flattens the result into a new array. It is similar to map followed by flat with a depth of 
+// 1. The flatMap method is useful for scenarios where you need to both transform and flatten an array in a single step.
