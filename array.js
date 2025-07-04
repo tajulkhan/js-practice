@@ -113,3 +113,6 @@ console.log(flatNumbers);
 let numbers = [1, 2, 3, 4];
 numbers.fill(0, 2, 4); // Fills with 0 from index 2 to 4 (exclusive)
 console.log(numbers);
+// How the values() Method Works
+// The values() method does not return the values of the array directly. Instead, it returns an iterator object, which is an object that allows you
+// to loop through the array values. The iterator object has a next() method that returns the next value in the array until all the values have been consumed.
