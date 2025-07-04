@@ -116,3 +116,9 @@ console.log(numbers);
 // How the values() Method Works
 // The values() method does not return the values of the array directly. Instead, it returns an iterator object, which is an object that allows you
 // to loop through the array values. The iterator object has a next() method that returns the next value in the array until all the values have been consumed.
+let a = [10, 20, 30];
+let iterator = a.values();
+console.log(iterator.next());  
+console.log(iterator.next());  
+console.log(iterator.next());  
+console.log(iterator.next());
