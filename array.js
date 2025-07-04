@@ -110,3 +110,6 @@ console.log(flatNumbers);
 // 18. Explain the fill method with an example.
 // The fill method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array length). 
 // It returns the modified array. The fill method is useful for initializing an array with a specific value or resetting elements in an existing array.
+let numbers = [1, 2, 3, 4];
+numbers.fill(0, 2, 4); // Fills with 0 from index 2 to 4 (exclusive)
+console.log(numbers);
