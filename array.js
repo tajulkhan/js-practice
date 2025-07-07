@@ -122,3 +122,7 @@ console.log(iterator.next());
 console.log(iterator.next());  
 console.log(iterator.next());  
 console.log(iterator.next());
+//Advanced Level
+// 1. How do you merge two arrays and remove duplicates?
+// You can merge two arrays and remove duplicates by using the Set object, which automatically removes duplicate values.
+
