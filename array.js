@@ -125,4 +125,6 @@ console.log(iterator.next());
 //Advanced Level
 // 1. How do you merge two arrays and remove duplicates?
 // You can merge two arrays and remove duplicates by using the Set object, which automatically removes duplicate values.
-
+// How can you sort an array of objects by multiple properties?
+// To sort an array of objects by multiple properties, you can use the sort method with a compare function that first 
+// compares one property and, if they are equal, compares another property.
