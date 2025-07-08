@@ -128,3 +128,19 @@ console.log(iterator.next());
 // How can you sort an array of objects by multiple properties?
 // To sort an array of objects by multiple properties, you can use the sort method with a compare function that first 
 // compares one property and, if they are equal, compares another property.
+let users = [
+  { name: 'John', age: 30 },
+  { name: 'Jane', age: 25 },
+  { name: 'John', age: 20 }
+];
+users.sort((a, b) => {
+  if (a.name === b.name) {
+    return a.age - b.age; 
+  } else {
+    return a.name.localeCompare(b.name);
+  }
+});
+console.log(users);
+
+
+
