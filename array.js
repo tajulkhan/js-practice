@@ -141,6 +141,17 @@ users.sort((a, b) => {
   }
 });
 console.log(users);
+// What does this code log?
+const arr = [1, 2, 3];
+arr[10] = 99;
+console.log(arr.length);
+// Explanation: When you assign to arr[10] you create empty slots from index 3 to 9, 
+// making the new length one more than the highest index: 10 + 1 = 11.
+// After arr[10] = 99;
+// Index :  0   1   2   3   4   5   6   7   8   9   10
+// Value : [1,  2,  3,  ,   ,   ,   ,   ,   ,   ,  99]
+// Length: 11
+
 
 
 
