@@ -151,7 +151,15 @@ console.log(arr.length);
 // Index :  0   1   2   3   4   5   6   7   8   9   10
 // Value : [1,  2,  3,  ,   ,   ,   ,   ,   ,   ,  99]
 // Length: 11
-
+// What will be the result of this expression?
+console.log(null ?? 'default');
+console.log(undefined ?? 'default');
+console.log(false ?? 'default');
+// Explanation:
+// The nullish coalescing operator ?? returns the right-hand side only if the left is null or undefined. So:
+// null ?? 'default' → 'default'
+// undefined ?? 'default' → 'default'
+// false ?? 'default' → false (because false is neither null nor undefined)
 
 
 
