@@ -160,8 +160,8 @@ console.log(false ?? 'default');
 // null ?? 'default' → 'default'
 // undefined ?? 'default' → 'default'
 // false ?? 'default' → false (because false is neither null nor undefined)
-How to delete property-specific values?
-The delete keyword deletes the whole property and all the values at once like
+// How to delete property-specific values?
+// The delete keyword deletes the whole property and all the values at once like
 let gfg={Course: "DSA", Duration:30};
 delete gfg.Course;
 console.log(gfg);
