@@ -151,7 +151,7 @@ console.log(arr.length);
 // Index :  0   1   2   3   4   5   6   7   8   9   10
 // Value : [1,  2,  3,  ,   ,   ,   ,   ,   ,   ,  99]
 // Length: 11
-// What will be the result of this expression?
+// What will be the result of this expression?  
 console.log(null ?? 'default');
 console.log(undefined ?? 'default');
 console.log(false ?? 'default');
@@ -160,6 +160,9 @@ console.log(false ?? 'default');
 // null ?? 'default' → 'default'
 // undefined ?? 'default' → 'default'
 // false ?? 'default' → false (because false is neither null nor undefined)
-
-
+How to delete property-specific values?
+The delete keyword deletes the whole property and all the values at once like
+let gfg={Course: "DSA", Duration:30};
+delete gfg.Course;
+console.log(gfg);
 
