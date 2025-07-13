@@ -166,3 +166,9 @@ let gfg={Course: "DSA", Duration:30};
 delete gfg.Course;
 console.log(gfg);
 
+// output of this recursive function
+function foo(num) {
+  if (num === 0) return 1;
+  return num + foo(num - 1);
+}
+console.log(foo(3));
