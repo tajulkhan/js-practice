@@ -172,3 +172,12 @@ function foo(num) {
   return num + foo(num - 1);
 }
 console.log(foo(3));
+// the output of this snippet?
+const a = [1, 2, 3];
+const b = [1, 2, 3];
+console.log(a == b, a === b);
+// false
+// false
+// Explanation
+// Arrays are objects and compared by reference. a and b are distinct objects, 
+// so both loose (==) and strict (===) comparisons yield false.
