@@ -181,3 +181,18 @@ console.log(a == b, a === b);
 // Explanation
 // Arrays are objects and compared by reference. a and b are distinct objects, 
 // so both loose (==) and strict (===) comparisons yield false.
+// Arrow functions in JavaScript
+const add = (a, b)=> a+b;
+console.log(add(10, 10));  
+// Arrow Function without Parameters
+const gmf=()=>{
+  console.log("hii");
+}
+gmf();
+const xy = x => x+x ;
+console.log(xy(10));
+// Arrow Function with Multiple Parameters
+const multiple = (x, y, z)=>{
+  console.log(x + y + z);
+}
+multiple(10, 20, 30);
