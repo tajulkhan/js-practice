@@ -196,3 +196,11 @@ const multiple = (x, y, z)=>{
   console.log(x + y + z);
 }
 multiple(10, 20, 30);
+// Arrow Function with Default Parameters
+// Arrow functions support default parameters, allowing predefined values 
+// if no argument is passed, making JavaScript function definitions more flexible and concise.
+const gfg = ( x, y, z = 30 ) => {
+    console.log( x + " " + y + " " + z);
+}
+gfg( 10, 20 );
+//10 20 30
