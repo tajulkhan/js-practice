@@ -210,3 +210,5 @@ gfg( 10, 20 );
 const makePerson = (firstName, lastName) =>
 ({first: firstName, last: lastName});
 console.log(makePerson("Pankaj", "Bind"));
+// Async Arrow Functions
+// Arrow functions can be made asynchronous by adding the async keyword before the parameter list.
