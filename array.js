@@ -207,3 +207,6 @@ gfg( 10, 20 );
 // Return Object Literals
 // In JavaScript, returning object literals within functions is concise: () => ({ key: value }) 
 // returns an object { key: value }, useful for immediate object creation and returning.
+const makePerson = (firstName, lastName) =>
+({first: firstName, last: lastName});
+console.log(makePerson("Pankaj", "Bind"));
