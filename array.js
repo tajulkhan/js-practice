@@ -204,3 +204,6 @@ const gfg = ( x, y, z = 30 ) => {
 }
 gfg( 10, 20 );
 //10 20 30
+// Return Object Literals
+// In JavaScript, returning object literals within functions is concise: () => ({ key: value }) 
+// returns an object { key: value }, useful for immediate object creation and returning.
