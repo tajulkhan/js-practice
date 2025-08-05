@@ -216,3 +216,8 @@ const fetchData = async () => {
     const data = await fetch('https://api.example.com/data');
     return data.json();
 };
+// JavaScript RegExp Constructor:
+// In JavaScript, a constructor gets called when an object is created using the new keyword.
+const str = "geeksforgeeks"
+const reg = new RegExp(/[g]/, 'g');
+console.log(str.match(reg));
