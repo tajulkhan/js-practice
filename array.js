@@ -227,3 +227,23 @@ console.log(str.match(reg));
 // Another major difference is that the key of WeakMap is weakly referenced. It means that whenever an object is used as a key for WeakMap, that object can be garbage collected. It can happen when the reference to that object is lost( i.e. assign that object reference to NULL). And when the object is no longer in
 // use, JavaScript Garbage Collection detects it and frees it from the memory. Therefore keys of WeakMaps are weakly referenced.
 // Syntax: const m = new WeakMap();
+// Creating a WeakMap Object
+const m = new WeakMap();
+// Adding elements in it
+// Remember, only object can
+// be a key in WeakMap
+obj1 = {} 
+m.set(obj1, "Object 1");
+obj2 = {}
+m.set(obj2, "Object 2");
+// Use delete() function
+m.delete(obj2);
+// Print the WeakMap
+console.log(m);
+// Using get() function to get 
+// specific element in WeakMap
+console.log(m.get(obj1));
+// Using has() function to check
+// if a particular element is 
+// present in WeakMap or not.
+console.log(m.has(obj1));
