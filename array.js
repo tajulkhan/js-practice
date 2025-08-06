@@ -221,3 +221,9 @@ const fetchData = async () => {
 const str = "geeksforgeeks"
 const reg = new RegExp(/[g]/, 'g');
 console.log(str.match(reg));
+// What is WeakMap in ES6 ?
+// WeakMap is a new Data Structure or Collection introduced in ES6. WeakMaps allows you to store a collection of Key-Value pairs. It adopts the same properties of Map.
+// The Major difference is that keys of WeakMap cannot be a primitive data type. The keys must be of type object and values can be of any data type. 
+// Another major difference is that the key of WeakMap is weakly referenced. It means that whenever an object is used as a key for WeakMap, that object can be garbage collected. It can happen when the reference to that object is lost( i.e. assign that object reference to NULL). And when the object is no longer in
+// use, JavaScript Garbage Collection detects it and frees it from the memory. Therefore keys of WeakMaps are weakly referenced.
+// Syntax: const m = new WeakMap();
