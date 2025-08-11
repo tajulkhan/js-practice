@@ -24,30 +24,18 @@ let promise = fetch(url, {
 
 let promise = fetch(url, {
   method: "GET", // Type of request: GET, POST, PUT, DELETE, etc.
-  
   headers: {
     "Content-Type": "text/plain;charset=UTF-8"
   },
-  
   body: undefined, // Only used with methods like POST or PUT, not GET
-  
   referrer: "about:client", // The referrer information sent
-  
   referrerPolicy: "strict-origin-when-cross-origin", // Controls when to send the referrer
-  
   mode: "cors", // 'cors', 'no-cors', 'same-origin' – controls CORS policy
-  
-  credentials: "same-origin", // Send cookies with the request: 'omit', 'same-origin', or 'include'
-  
-  cache: "default", // How the request uses the browser cache
-  
-  redirect: "follow", // Automatically follow redirects: 'follow', 'manual', 'error'
-  
-  integrity: "", // Used for Subresource Integrity (rare in fetch)
-  
-  keepalive: false, // Allows request to outlive the page (e.g. in unload)
-  
-  signal: undefined, // Used to abort fetch with AbortController
-  
+  credentials: "same-origin", // Send cookies with the request: 'omit', 'same-origin', or 'include'  
+  cache: "default", // How the request uses the browser cache  
+  redirect: "follow", // Automatically follow redirects: 'follow', 'manual', 'error'  
+  integrity: "", // Used for Subresource Integrity (rare in fetch)  
+  keepalive: false, // Allows request to outlive the page (e.g. in unload)  
+  signal: undefined, // Used to abort fetch with AbortController  
   window: window // Browser context (only used in some cases)
 });
