@@ -19,6 +19,8 @@ for (let student in students) {
     }
   }
 
+
+  
   let average = total / Object.keys(subjects).length;
 
   if (!pass) {
