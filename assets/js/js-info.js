@@ -33,3 +33,20 @@ for (let student in students) {
     console.log(`${student} barely passed with Average: ${average}`);
   }
 }
+
+// Count word occurrences in a sentence
+let sentence = "the cat and the dog chased the cat";
+// Step 1: Split into words
+let words = sentence.split(" ");
+// Step 2: Create an empty object
+let wordCount = {};
+// Step 3: Loop & count
+for (let word of words) {
+  if (wordCount[word]) {
+    wordCount[word]++;  // if word already exists, increase count
+  } else {
+    wordCount[word] = 1; // else initialize with 1
+  }
+}
+// Step 4: Display results
+console.log(wordCount);
